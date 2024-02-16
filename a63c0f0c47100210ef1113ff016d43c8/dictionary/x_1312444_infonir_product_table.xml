@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dcbcc34c47100210ef1113ff016d43a9" label="Product Table" max_length="40" name="x_1312444_infonir_product_table" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" display="true" label="Product Name" mandatory="true" max_length="40" name="product_name" type="string">
+            <choice>
+                <element inactive_on_update="false" label="RFPFlow" sequence="0" value="rfpflow"/>
+                <element inactive_on_update="false" label="OnboardingFlow" sequence="1" value="onboardingflow"/>
+                <element inactive_on_update="false" label="ContractFlow" sequence="2" value="contractflow"/>
+                <element inactive_on_update="false" label="ObligationFlow" sequence="3" value="obligationflow"/>
+                <element inactive_on_update="false" label="InvoiceFlow" sequence="4" value="invoiceflow"/>
+            </choice>
+        </element>
+        <element active="false" label="New File Attachment" max_length="40" name="u_file_attachment_2" type="file_attachment"/>
+        <element attributes="encode_utf8=false" label="Product Lead" mandatory="true" max_length="32" name="u_product_lead" reference="x_1312444_infonir_user" type="reference"/>
+        <index name="index">
+            <element name="u_product_lead"/>
+        </index>
+    </element>
+</database>

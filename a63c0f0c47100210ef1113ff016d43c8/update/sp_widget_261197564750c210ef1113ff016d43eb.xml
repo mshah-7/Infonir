@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	var releasename;
+	$scope.hasLearningDocument = function() {
+		console.log(c.data.fileName);
+		if(c.data.fileName == null) {
+			return false;
+		}
+		return true;
+	}
+	
+	$scope.showMembers = function() {
+		console.log(c.data.users);
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust as needed */
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow here */
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: #ffffff;
+}
+
+.back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.content {
+  text-align: center;
+}
+
+.front .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  table {
+    text-align: center;
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 10px;
+  }
+
+  .fa-solid {
+    color: #808080;
+    font-size: 3em;
+  }
+
+  .fa-solid.fa-download {
+    font-size: 2em; 
+  }
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #20D900;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button:hover {
+    background-color: #00AF91;
+  }
+
+.back .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div[ng-if="hasLearningDocument()"] {
+  display: inline-block;
+}
+
+div[ng-if="hasLearningDocument()"] i.fa-solid {
+  margin-right: 5px;
+}
+
+div[ng-if="hasLearningDocument()"] a {
+  margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>cards_mit</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>cards mit</name>
+        <option_schema>[{"name":"product_name","section":"Data","label":"Product Name","type":"string"},{"name":"image_name","section":"other","label":"Image Name","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	try {
+		//Fetching sys id of particular product
+		var productNameSysId;
+		var productName = options.product_name.toLowerCase().replace(/ /g, "");
+		var grProductTable = new GlideRecord("x_1312444_infonir_product_table");
+		grProductTable.addQuery("product_name",productName);
+		grProductTable.query();
+		if(grProductTable.next()) {
+			 productNameSysId = grProductTable.getValue("sys_id");
+		}
+		
+		//Fetching sys id of record of particular product with learning path document
+		var documentTableSysId;
+		var grDocumentTable = new GlideRecord("x_1312444_infonir_document_table");
+		grDocumentTable.addQuery("u_product_name",productNameSysId);
+		grDocumentTable.addQuery("u_document_type","learning path");
+		grDocumentTable.query();
+		if(grDocumentTable.next()) {
+			documentTableSysId = grDocumentTable.getValue("sys_id");
+		}
+		
+		//Fetching learning path document from sys attachment table
+		var grSysAttachmentTable = new GlideRecord("sys_attachment");
+		grSysAttachmentTable.addQuery("table_sys_id",documentTableSysId);
+		grSysAttachmentTable.query();
+		if(grSysAttachmentTable.next()) {
+			var sysId = grSysAttachmentTable.getValue("sys_id");
+			data.fileName = grSysAttachmentTable.getValue("file_name");
+			data.sysId = sysId;
+			//console.log(sysId);
+			/*
+			if (grSysAttachmentTable.get(sysId)) {
+				var attachmentURL = grSysAttachmentTable.getValue('file_path'); // Or any appropriate field that stores the attachment URL
+    		var attachmentType = grSysAttachmentTable.getValue('content_type'); // This will give you the MIME type of the attachment
+	
+				var downloadLink = document.createElement('a');
+        downloadLink.href = attachmentURL;
+        downloadLink.textContent = 'Download Document';
+        downloadLink.download = grSysAttachmentTable.getValue('file_name'); // Set the filename for download
+        document.getElementById('attachmentContainer').appendChild(downloadLink);
+			}
+			*/
+			/*
+			var sa = new GlideSysAttachment();
+			var binData = sa.getBytes(grSysAttachmentTable);
+			var base64 = GlideStringUtil.base64Encode(binData);
+			data.learningPathDocument = base64;
+			*/
+			
+			//Fetching users of particular product & team
+			var team = "pe";
+			var grUserTable = new GlideRecord("x_1312444_infonir_user");
+			grUserTable.addQuery("u_product",productNameSysId);
+			grUserTable.addQuery("u_team",team);
+			grUserTable.query();
+			data.users = [];
+			while(grUserTable.next()) {
+				//console.log(grUserTable.getDisplayValue("u_uname"));
+				data.users.push(grUserTable.getDisplayValue("u_uname").toString());
+			}
+				
+		}
+
+		
+	}catch(error) {
+		
+	}
+	
+		data.listOpt1 = {
+			"secondary_fields":"",
+			"always_show":"true",
+			"table":"x_1312444_infonir_release_table",
+			"filter":"u_product=" +  productNameSysId ,
+			"display_field":"u_members",
+			"maximum_entries":"10"
+		};
+
+	/*data.listOpt1 = {
+		"secondary_fields":"",
+		"always_show":"true",
+		"table":"x_1312444_infonir_release_table",
+		"filter":"u_product=" +  productNameSysId ,
+		"display_field":"u_members",
+		"maximum_entries":"10"
+	};*/
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-14 05:43:18</sys_created_on>
+        <sys_id>261197564750c210ef1113ff016d43eb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>cards mit</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_261197564750c210ef1113ff016d43eb</sys_update_name>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-14 06:18:23</sys_updated_on>
+        <template><![CDATA[<head>
+<script src="https://kit.fontawesome.com/72b2b3db94.js" crossorigin="anonymous"></script>
+</head>
+<div class="card-container">
+  <div class="card">
+    <div class="front">
+      <div class="content">
+      <!--  <h2>{{options.product_name}}</h2> -->
+        <img src='{{options.image_name}}' width="300"/>
+      </div>
+    </div>
+    <div class="back">
+      <div class="content">
+        <table>
+          <tr>
+            <td rowspan="3"><i class="fa-solid fa-people-group fa-5x"></i></td>
+          </tr>
+          <tr>
+            <td><a href="?id=release_page_infonir&product={{options.product_name}}&team=pe">PE</a></td>
+            <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View Team</button></td>
+          </tr>
+          <tr>
+            <td><a href="?id=vendor_page_infonir&product={{options.product_name}}&team=ps">PS</a></td>
+            <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View Team</button></td>
+          </tr>
+        </table>
+        <table ng-if="hasLearningDocument()">
+          <tr>
+            <td><a href="https://dev203003.service-now.com/nav_to.do?uri=sys_attachment.do?sys_id={{data.sysId}}" target="_blank"><i class="fa-solid fa-download"></i></a></td>
+            <td></td>
+            <td>{{data.fileName}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+           <widget id="widget-simple-list" options="data.listOpt1" ng-if="Object.keys(data.listOpt1).length > 0">TEST</widget>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+]]></template>
+    </sp_widget>
+</record_update>

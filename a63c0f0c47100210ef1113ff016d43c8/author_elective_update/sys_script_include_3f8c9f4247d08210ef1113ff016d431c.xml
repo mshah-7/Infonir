@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1312444_infonir.get_product_sys_id</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>get_product_sys_id</name>
+        <script><![CDATA[var get_product_sys_id = Class.create();
+get_product_sys_id.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getSysIdByProductName: function(productName) {
+        var sysId = '';
+        if (productName) {
+            var productGr = new GlideRecord('x_1312444_infonir_product_table');
+            productGr.addQuery('product_name', productName);
+            productGr.query();
+            if (productGr.next()) {
+                sysId = productGr.getValue('sys_id');
+            }
+        }
+        return sysId;
+    },
+
+    type: 'ProductSysIdUtil'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-13 11:56:10</sys_created_on>
+        <sys_id>3f8c9f4247d08210ef1113ff016d431c</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>get_product_sys_id</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_script_include_3f8c9f4247d08210ef1113ff016d431c</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-14 08:11:08</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sys_script_include_3f8c9f4247d08210ef1113ff016d431c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1312444_infonir.get_product_sys_id&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;get_product_sys_id&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var get_product_sys_id = Class.create();
+get_product_sys_id.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    getSysIdByProductName: function(productName) {
+        var sysId = '';
+        if (productName) {
+            var productGr = new GlideRecord('x_1312444_infonir_product_table');
+            productGr.addQuery('product_name', productName);
+            productGr.query();
+            if (productGr.next()) {
+                sysId = productGr.getValue('sys_id');
+            }
+        }
+        return sysId;
+    },
+
+    type: 'ProductSysIdUtil'
+});
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mansi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-13 11:56:10&lt;/sys_created_on&gt;&lt;sys_id&gt;3f8c9f4247d08210ef1113ff016d431c&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;get_product_sys_id&lt;/sys_name&gt;&lt;sys_package display_value="Infonir" source="x_1312444_infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_3f8c9f4247d08210ef1113ff016d431c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mansi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-14 08:11:08&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>932314018</payload_hash>
+        <record_name>get_product_sys_id</record_name>
+        <reverted_from/>
+        <source>e521b79647d0c210ef1113ff016d4349</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-14 08:11:08</sys_created_on>
+        <sys_id>44f2bb1a47d0c210ef1113ff016d43b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da6ab6a910000001</sys_recorded_at>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-14 08:11:08</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>0cf2bb1a69d0c210c797dc18981a43b1</update_guid>
+        <update_guid_history>0cf2bb1a69d0c210c797dc18981a43b1:932314018,5bc2f7d6edd0c210a33e8c24b6c54d54:581347842,30623fd61bd0c2109326b2431dca74dd:1435275276,3052b31abcd0c21040ee2ec1b8577cdd:1753046301,5579179ef150c2106150d5a13157ebc3:1311430455,8952670ad2d082104beec1d014f915db:-1248538123,0422ab064cd082107b784b9b9a8ad2b7:-1239502998,de12af869dd0821063c82f1aefb3ad79:550481674,7aa1abc6bbd0821063272d876730b8af:223406531,9790eb06cbd082109ae18a55b0bfca0d:991514762,2f2f530600d08210321f9b9588bcad9e:-1921087491,9e7e9b065ed082105081e2c6996416ae:-1270490644,487e970661d082101e29e728713684a2:1864387310,322ed7c23ad0821059c710a33df4346f:441255856,44dd130684d08210226fdf3f06d59a94:-1936979690,f5ad5fc271d082108a3cd93648a4098f:-1760641059,2c4d93c257d0821091bf9f4b71677204:1004516640,b2dc9f42ffd08210ce4965f76de24645:-1376873824</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-14 08:13:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>10ca4ae492724d3f8148cea3b94a9901</sys_id>
+        <sys_metadata>3f8c9f4247d08210ef1113ff016d431c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>get_product_sys_id</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sys_script_include_3f8c9f4247d08210ef1113ff016d431c</sys_update_name>
+        <sys_update_version display_value="sys_script_include_3f8c9f4247d08210ef1113ff016d431c">44f2bb1a47d0c210ef1113ff016d43b2</sys_update_version>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-14 08:13:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

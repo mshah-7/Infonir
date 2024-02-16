@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, spModal) {
+    /* widget controller */
+    var c = this;
+		var releasename;
+  // more control, passing options
+    //c.onConfirmEx = function() {
+       /*spModal.open({
+            title: 'Team Members',
+            widget: "widget-simple-list", 
+            widgetInput: {table:"x_1312444_infonir_release_table",display_field:"u_members"}
+        }).then(function(){
+            console.log('widget dismissed');
+        }) 
+    }*/
+		$rootScope.$on('key', function(event, data)
+			{
+   	 		c.data.release = data;
+	  		releasename = c.data.release;
+				c.server.update();
+			});
+	
+		  $scope.showMembers = function() {
+				var m = "";
+				for(var i in c.data.employees) {
+					 m += '<h4><i class="fa-regular fa-address-card fa-1x"></i> ' + c.data.employees[i] + '</h4>';
+				}
+        spModal.open({
+            title: 'Team Members',
+            message: m,
+					buttons: [{
+            label: 'Close',
+            primary: true,
+            disabled: true // This will disable the button
+        }]
+        })
+    }
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.btn {
+  background-color:#20D900;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>team_mit</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>team mit</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	// You can add server-side logic if needed
+	
+		var productName = $sp.getParameter('product');
+		productName = productName.toLowerCase();
+		productName = productName.replace(/\s/g, '');
+		
+	if(input) {
+			var relName = input.release;
+			var productGr = new GlideRecord('x_1312444_infonir_product_table');
+			productGr.addQuery('product_name', productName);
+			productGr.query();
+			var productSysId;
+			if (productGr.next()) {
+				productSysId = productGr.getValue('sys_id');
+			}
+			
+			var grReleaseTable = new GlideRecord("x_1312444_infonir_release_table");
+			grReleaseTable.addQuery('u_product',productSysId);
+			grReleaseTable.addQuery('u_release_name',relName);
+			grReleaseTable.query();
+			data.employees = [];
+			while(grReleaseTable.next()) {
+				//console.log(grReleaseTable.getDisplayValue('u_members').split(','));
+				data.employees.push(grReleaseTable.getDisplayValue('u_lead'));
+				data.employees.push(grReleaseTable.getDisplayValue('u_members').split(','));
+			}
+			data.employees = data.employees.flat(1);
+		 data.employees = [...new Set(data.employees)];
+		}
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-12 08:54:27</sys_created_on>
+        <sys_id>9ba961bd471c0210ef1113ff016d43e9</sys_id>
+        <sys_mod_count>67</sys_mod_count>
+        <sys_name>team mit</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_9ba961bd471c0210ef1113ff016d43e9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-15 05:18:58</sys_updated_on>
+        <template><![CDATA[<!--
+<widget id="widget-simple-list" options="data.listOpt1" >TEST</widget>
+ <button ng-click="c.onConfirmEx()">
+    Show Team
+  </button>
+
+  <span>{{c.confirmed}}</span> -->
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/72b2b3db94.js" crossorigin="anonymous"></script>
+</head>
+<button type="button" class="btn btn-info btn-sm" ng-click="showMembers()">View Team</button>
+
+<!-- Modal 
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <widget id="widget-simple-list" options="data.listOpt1" ng-if="Object.keys(data.listOpt1).length > 0">TEST</widget>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> -->]]></template>
+    </sp_widget>
+</record_update>

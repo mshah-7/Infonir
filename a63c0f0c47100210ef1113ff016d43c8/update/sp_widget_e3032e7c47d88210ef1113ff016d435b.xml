@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $rootScope) {
+  /* widget controller */
+
+
+	var c = this;
+	var release = c.data.release.filter(function(value) {
+        return value !== ""; // Filter out empty values
+    });
+	
+	
+	if(release.length > 0) {
+		var selectElement = document.getElementById('release');
+
+		
+
+		release.sort().reverse();
+
+		for(var i = 0; i < release.length; i++) {
+			var option = document.createElement("option");
+			option.text = release[i];
+			selectElement.add(option);
+			
+		}
+
+		
+
+		selectElement.selectedIndex = 0;
+		$scope.broadcastReleaseSelection = function() {
+			var selectedRelease = selectElement.value;
+			//alert(selectedRelease);
+			localStorage.setItem('key',selectedRelease);
+			$rootScope.$broadcast('key',selectedRelease);
+		};
+	}else {
+		console.log(c.data.release);
+	}
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {
+    font-family: Arial, sans-serif;
+  }
+  h2 {
+    color: #333;
+  }
+  select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #20d900;
+    color: white;
+    border-radius: 5px;
+    margin: 0 
+  }
+  option {
+    background-color: white;
+    color: black;
+  }
+  p {
+    margin-top: 20px;
+  }</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>release_selection_infonir</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Release Selection Infonir</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  data.release = [];
+  
+  // Get the "product" parameter from the URL
+  var productName = $sp.getParameter('product');
+	productName = productName.toLowerCase();
+	productName = productName.replace(/\s/g, '');
+
+  // Query the referenced table to get the sys_id of the referenced record based on the product name
+  var productGr = new GlideRecord('x_1312444_infonir_product_table');
+  productGr.addQuery('product_name', productName);
+  productGr.query();
+
+  if (productGr.next()) {
+    var productSysId = productGr.getValue('sys_id');
+
+		// Query records based on the product reference field
+		var releases = new GlideRecord('x_1312444_infonir_release_table');
+		releases.addQuery('u_product', productSysId);
+		releases.query();
+
+    while (releases.next()) {
+      data.release.push(releases.getValue('u_release_name'));
+    }
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-09 10:31:13</sys_created_on>
+        <sys_id>e3032e7c47d88210ef1113ff016d435b</sys_id>
+        <sys_mod_count>105</sys_mod_count>
+        <sys_name>Release Selection Infonir</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_e3032e7c47d88210ef1113ff016d435b</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-16 12:04:08</sys_updated_on>
+        <template><![CDATA[<div>
+  <!-- your widget template -->
+  <select id="release" name='release' value="selectElement.selectIndex" ng-model='c.release' ng-change="broadcastReleaseSelection()">
+    <option value="" disabled selected>Select the Release</option>
+    <!-- Add other options here if needed -->
+  </select>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

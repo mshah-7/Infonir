@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_1312444_infonir_vendor" version="2" view="asdf">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_active</element>
+            <list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+            <sys_id>b18842ca475c4210ef1113ff016d43a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_point_of_contact</element>
+            <list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+            <sys_id>358842ca475c4210ef1113ff016d43a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_team_lead</element>
+            <list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+            <sys_id>b58842ca475c4210ef1113ff016d43a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_vname</element>
+            <list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+            <sys_id>398842ca475c4210ef1113ff016d43a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_1312444_infonir_vendor</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b188028a475c4210ef1113ff016d430e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1312444_infonir_vendor</sys_name>
+            <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+            <sys_update_name>sys_ui_list_x_1312444_infonir_vendor_asdf</sys_update_name>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="asdf" name="asdf">bd88028a475c4210ef1113ff016d4309</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sys_ui_list_x_1312444_infonir_vendor_asdf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="x_1312444_infonir_vendor" version="2" view="asdf"><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_active</element><list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-13 05:47:44</sys_created_on><sys_id>b18842ca475c4210ef1113ff016d43a5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:47:44</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_point_of_contact</element><list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-13 05:47:44</sys_created_on><sys_id>358842ca475c4210ef1113ff016d43a5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:47:44</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_team_lead</element><list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-13 05:47:44</sys_created_on><sys_id>b58842ca475c4210ef1113ff016d43a5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:47:44</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="INSERT_OR_UPDATE"><average_value>false</average_value><element>u_vname</element><list_id display_value="x_1312444_infonir_vendor" element="NULL" name="x_1312444_infonir_vendor" parent="NULL" relationship="NULL" sys_domain="global" view="bd88028a475c4210ef1113ff016d4309">b188028a475c4210ef1113ff016d430e</list_id><max_value>false</max_value><min_value>false</min_value><position>3</position><sum>false</sum><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-13 05:47:44</sys_created_on><sys_id>398842ca475c4210ef1113ff016d43a5</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:47:44</sys_updated_on></sys_ui_list_element><sys_ui_list action="INSERT_OR_UPDATE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>x_1312444_infonir_vendor</name><parent/><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-13 05:47:44</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b188028a475c4210ef1113ff016d430e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1312444_infonir_vendor</sys_name><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sys_ui_list_x_1312444_infonir_vendor_asdf</sys_update_name><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:47:44</sys_updated_on><sys_user/><view display_value="asdf" name="asdf">bd88028a475c4210ef1113ff016d4309</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+        <payload_hash>945423768</payload_hash>
+        <record_name>Vendor Table</record_name>
+        <reverted_from/>
+        <source>e8b8b07947580210ef1113ff016d4304</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 05:47:44</sys_created_on>
+        <sys_id>f98842ca475c4210ef1113ff016d43a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da101c6bd0000001</sys_recorded_at>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:47:44</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>718842cade5c421082dbd868ed3a2da7</update_guid>
+        <update_guid_history>718842cade5c421082dbd868ed3a2da7:945423768</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 05:57:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>1c2e8758cf6f4c10a4d73bd411de82f9</sys_id>
+        <sys_metadata>b188028a475c4210ef1113ff016d430e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1312444_infonir_vendor</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent display_value="Vendor Table">c957d34847500210ef1113ff016d43ad</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_1312444_infonir_vendor_asdf</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_1312444_infonir_vendor_asdf">f98842ca475c4210ef1113ff016d43a7</sys_update_version>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:57:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

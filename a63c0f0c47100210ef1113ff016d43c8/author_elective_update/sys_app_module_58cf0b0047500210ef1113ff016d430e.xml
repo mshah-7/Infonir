@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Infonir">7cdcc74c47100210ef1113ff016d4308</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title>Requirement Tables</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1312444_infonir_requirement_table</name>
+        <order>10</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_1312444_infonir.requirement_table_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-07 05:51:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>58cf0b0047500210ef1113ff016d430e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Requirement Tables</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_app_module_58cf0b0047500210ef1113ff016d430e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-07 06:31:25</sys_updated_on>
+        <timeline_page/>
+        <title>Requirement Tables</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sys_app_module_58cf0b0047500210ef1113ff016d430e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Infonir">7cdcc74c47100210ef1113ff016d4308</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><mobile_title>Requirement Tables</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1312444_infonir_requirement_table</name><order>10</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_1312444_infonir.requirement_table_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-02-07 05:51:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>58cf0b0047500210ef1113ff016d430e</sys_id><sys_mod_count>6</sys_mod_count><sys_name>Requirement Tables</sys_name><sys_overrides/><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sys_app_module_58cf0b0047500210ef1113ff016d430e</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-02-07 06:31:25</sys_updated_on><timeline_page/><title>Requirement Tables</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>978343362</payload_hash>
+        <record_name>Requirement Tables</record_name>
+        <reverted_from/>
+        <source>663c0f0c47100210ef1113ff016d43ca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-07 06:31:25</sys_created_on>
+        <sys_id>97f89bc847500210ef1113ff016d432d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d82439aff0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-07 06:31:25</sys_updated_on>
+        <type>Module</type>
+        <update_guid>9ff89bc89c5002109e9bf338040a872c</update_guid>
+        <update_guid_history>9ff89bc89c5002109e9bf338040a872c:978343362,c7185b88cc5002100bd516d87501d944:588553995,1d951f846a5002101d9d0a7358acd89c:-1766504782,3d751f841e500210ecd54b1cbd65981b:1089600430,69051b8453500210e08c7c888f6cea04:-1963728151,cde45f441b500210852d6021b2d8eba2:-111453138,50cf0b00dc500210fd22ecd62be12610:-1212487243</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Requirement Tables">d78a1b4c47500210ef1113ff016d4368</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-07 06:38:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>257ab421b6794d10b950ccd86f065b24</sys_id>
+        <sys_metadata>58cf0b0047500210ef1113ff016d430e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Requirement Tables</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sys_app_module_58cf0b0047500210ef1113ff016d430e</sys_update_name>
+        <sys_update_version display_value="sys_app_module_58cf0b0047500210ef1113ff016d430e">97f89bc847500210ef1113ff016d432d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-07 06:38:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

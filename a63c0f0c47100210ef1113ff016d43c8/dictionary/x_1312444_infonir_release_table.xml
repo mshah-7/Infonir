@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5630934047500210ef1113ff016d436a" label="Release Table" max_length="40" name="x_1312444_infonir_release_table" type="collection">
+        <element attributes="encode_utf8=false" label="Lead" mandatory="true" max_length="32" name="u_lead" reference="x_1312444_infonir_user" type="reference"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Members" max_length="1024" name="u_members" reference="sys_user" type="glide_list"/>
+        <element attributes="encode_utf8=false" label="Product" max_length="32" name="u_product" reference="x_1312444_infonir_product_table" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Release Date" max_length="40" name="u_release_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Release Name" mandatory="true" max_length="40" name="u_release_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="On Going" sequence="0" value="on going"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive="true" inactive_on_update="true" label="On Hault" sequence="1" value="on hault"/>
+                <element inactive_on_update="false" label="On-Hault" sequence="1" value="on-hault"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_lead"/>
+        </index>
+        <index name="index2">
+            <element name="u_product"/>
+        </index>
+    </element>
+</database>

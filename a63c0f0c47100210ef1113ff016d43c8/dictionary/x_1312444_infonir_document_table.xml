@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="2d905b4047500210ef1113ff016d4366" label="Document Table" max_length="40" name="x_1312444_infonir_document_table" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="learning path" label="Document Type" max_length="40" name="u_document_type" type="string" use_dependent_field="true">
+            <choice>
+                <element inactive_on_update="false" label="Learning Path" sequence="0" value="learning path"/>
+                <element inactive_on_update="false" label="Releases" sequence="1" value="releases"/>
+                <element inactive_on_update="false" label="Vendor" sequence="2" value="vendor"/>
+                <element inactive_on_update="false" label="Others" sequence="3" value="others"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Product Name" mandatory="true" max_length="32" name="u_product_name" reference="x_1312444_infonir_product_table" type="reference"/>
+        <element attributes="encode_utf8=false" dependent="u_product_name" dependent_on_field="u_product_name" label="Release Name" max_length="32" name="u_release_name" reference="x_1312444_infonir_release_table" type="reference" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="40" name="u_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="ongoing" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Ongoing" sequence="0" value="ongoing"/>
+                <element inactive_on_update="false" label="On-Hault" sequence="1" value="on-hault"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Team" max_length="40" name="u_team" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="None" sequence="0" value="none"/>
+                <element inactive_on_update="false" label="PE" sequence="0" value="pe"/>
+                <element inactive_on_update="false" label="PS" sequence="1" value="ps"/>
+                <element inactive_on_update="false" label="Others" sequence="2" value="others"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_product_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_release_name"/>
+        </index>
+    </element>
+</database>

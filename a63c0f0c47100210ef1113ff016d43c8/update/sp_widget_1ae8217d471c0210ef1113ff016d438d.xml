@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($rootScope, $scope, spUtil, spModal) {
+  /* widget controller */
+  var c = this;
+  var sys_id = sys_id;
+  var id = -1;
+
+  c.onaddrequirement = function(action) {
+    if (action == "insert") {
+      spModal.open({
+        title: 'Insert Record',
+        widget: 'widget-form',
+        widgetInput: { sys_id: id, table: 'x_1312444_infonir_requirement_table' }
+      }).then(function() {
+
+        c.server.update();
+        setTimeout(function() {
+          spUtil.update($scope);
+        }, 3000);
+
+        var team_name = $sp.getParameter('team');
+        if (team_name) {
+          g_form.setValue("u_team", team_name);
+        }
+
+      });
+    }
+  };
+
+  c.showRequirement = function() {
+
+    if (c.data.role == "user") {
+      return false;
+    }
+    return true;
+  }
+
+  $rootScope.$on('key', function(event, data) {
+
+    c.data.release = data;
+    c.server.update();
+  });
+
+  c.onUpdate = function(id, action) {
+    spUtil.addInfoMessage("Record Updated");
+    if (action == "update") {
+      spModal.open({
+        title: 'Update Details',
+        widget: "widget-form",
+        widgetInput: { sys_id: id, table: 'x_1312444_infonir_requirement_table' },
+      }).then(function() {
+
+        c.server.update();
+        setTimeout(function() {
+          spUtil.update($scope);
+        }, 3000);
+
+      })
+    }
+  }
+
+  c.onDelete = function(sys_id) {
+    spModal.confirm('Do you really want to delete?').then(function(answer) {
+      c.data.sys_id = sys_id;
+
+      c.server.update();
+
+      setTimeout(function() {
+        spUtil.update($scope);
+      }, 3000);
+
+      spUtil.addInfoMessage("record Deleted");
+
+    })
+
+  }
+
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+/* Button Styles */
+#dynamicTableWidget .add-requirement {
+    position: relative;
+    display: inline-block;
+}
+
+#dynamicTableWidget .add-requirement button {
+    background-color: #007bff; /* Blue color for the button */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Larger padding for better clickability */
+    border: none;
+    border-radius: 4px; /* No border radius for a rectangular shape */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-weight: bold; /* Make the plus sign bolder */
+    font-size: 20px; /* Increase font size for the plus sign */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align content to the right */
+}
+
+#dynamicTableWidget button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Info Message Styles */
+#dynamicTableWidget .info {
+    display: none;
+    position: absolute;
+    top: calc(-100% - 10px); /* Position above the button with some spacing */
+    left: 50%;
+    transform: translateX(-50%);
+  	font-family: 'Poppins', sans-serif;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    padding: 5px 10px; /* Padding for the message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    white-space: nowrap; /* Ensure message stays in one line */
+}
+
+#dynamicTableWidget .add-requirement:hover .info {
+    display: block;
+}
+#dynamicTableWidget {
+    float: right; /* Float the widget to the right */
+    margin-left: 20px; /* Add some margin to separate from the heading */
+}
+
+
+
+
+
+
+/* Reset default styles */
+body, h2, table, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container for the table and headings */
+.container {
+    margin: 20px;
+}
+
+/* Headings */
+h2.ongoing {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: -40px;
+  	
+}
+h2.completed {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: -20px;
+  	
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  	margin-top: 40px; 	
+}
+
+/* Table headings */
+th {
+    background-color: #00AF91;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+
+/* Table cells */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+      margin-bottom: 20px;
+  		font-family: 'Poppins', sans-serif;
+}
+
+/* Alternate row background color */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Button styles */
+/* Button styles */
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#update {
+    background-color: #4caf50; /* Green color for update button */
+    color: #fff;
+}
+
+button#delete {
+    background-color: #d11a2a; /* Red color for delete button */
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+/* Status column styles */
+.status {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Completed status */
+.status.completed {
+    color: #00AF91; /* Green color for completed status */
+}
+
+/* Other status */
+.status:not(.completed) {
+    color: #FFA500; /* Red color for other status */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>demo_display</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Demo display</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+		var role = gs.getUser().roles;
+	data.role = role;
+
+		var productName=$sp.getParameter('product');
+		productName = productName.toLowerCase();
+		productName = productName.replace(/\s/g, '');
+	//console.log(productName);
+	  var team=$sp.getParameter('team');
+	//	console.log(team);
+		//team=team.toLowerCase();
+		
+	
+		var productGr = new GlideRecord('x_1312444_infonir_product_table');
+  	productGr.addQuery('product_name', productName);
+  	productGr.query();
+		
+		var productsys_id=-1;
+		if(productGr.next()){
+			productsys_id=productGr.getValue('sys_id');
+		}
+		if(input){
+			
+		var rname=input.release;
+		console.log(rname);
+		var releaseGr=new GlideRecord('x_1312444_infonir_release_table');
+		releaseGr.addQuery('u_release_name',input.release);
+			releaseGr.addQuery('u_product',productsys_id);
+		releaseGr.query();
+	
+		var releasesys_id=-1;
+		if(releaseGr.next()){
+			releasesys_id=releaseGr.getValue('sys_id');
+		}
+	
+		
+		
+		
+		console.log(releasesys_id);
+		
+		data.table=[];
+		var gr=new GlideRecord('x_1312444_infonir_requirement_table');
+		gr.addQuery('u_product_name',productsys_id);
+	  gr.addQuery('u_team',team);
+		gr.addQuery('u_release',releasesys_id);
+	  gr.query();
+		var count=0;
+		var allCompleted=true;
+		while(gr.next()){
+			
+			//console.log(gr.getValue('u_product_name'));
+			count++;
+			var obj={};
+			obj.id=count;
+			obj.requirement=gr.getValue('u_requirement');
+			obj.description=gr.getValue('u_description');
+			obj.status=gr.getValue('u_status');
+			obj.sys_id=gr.getValue('sys_id');
+			console.log(obj);
+			data.table.push(obj);
+			 if (gr.getValue('u_status') != 'completed') {
+      allCompleted = false;
+    }
+		}
+			data.allCompleted = allCompleted;
+	
+		}
+		if(input && input.sys_id){
+		var row=new GlideRecord('x_1312444_infonir_requirement_table');
+		row.addQuery('sys_id',input.sys_id);
+		row.query();
+		
+		if(row.next()){
+			row.deleteRecord();
+		}
+																		 
+	}
+	
+})();
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yash</sys_created_by>
+        <sys_created_on>2024-02-12 08:51:07</sys_created_on>
+        <sys_id>1ae8217d471c0210ef1113ff016d438d</sys_id>
+        <sys_mod_count>178</sys_mod_count>
+        <sys_name>Demo display</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_1ae8217d471c0210ef1113ff016d438d</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-16 08:18:04</sys_updated_on>
+        <template><![CDATA[
+ <head>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<div class="container" ng-if="c.data.release">
+   
+
+<h2 class="completed" ng-if="c.data.allCompleted">What's New</h2>
+<h2 class="ongoing" ng-if="!c.data.allCompleted">Current Requirements</h2>
+  <div ng-if="!c.data.allCompleted">
+    
+  
+  <div id="dynamicTableWidget" ng-if="c.showRequirement()">
+    <div class="add-requirement">
+      <button id="addrequirement" ng-click="c.onaddrequirement('insert')">+</button>
+      <div class="info">Add Requirement</div>
+    </div>
+  </div>
+    </div>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th ng-show="c.showRequirement()">Update</th>
+      <th ng-show="c.showRequirement()">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in c.data.table">
+      <td>{{row.id}}</td>
+      <td>{{row.requirement}}</td>
+      <td>{{row.description}}</td>
+      <td class="status {{row.status}}">{{row.status}}</td>      
+      <td ng-show="c.showRequirement()"><button id="update" ng-click="c.onUpdate(row.sys_id,'update')">Update</button></td>
+      <td ng-show="c.showRequirement()"><button id="delete" ng-click="c.onDelete(row.sys_id)">Delete</button></td>
+        
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+  ]]></template>
+    </sp_widget>
+</record_update>

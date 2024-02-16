@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#greeting-widget {
+  background-color: #00AF91;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+}
+
+#greeting-widget p {
+  font-size: 24px; /* Increase font size for the main text */
+  color: #ffffff;
+  margin: 0;
+}
+
+.username {
+  font-family: 'Eudoxus Sans', sans-serif; /* Applying Eudoxus Sans font */
+  font-size: 28px; /* Increase font size for the username */
+  color: #fbb33f;
+}
+
+#greeting-widget p::before,
+#greeting-widget p::after {
+  margin: 0 5px;
+  color: #4285f4; /* You can change the color to your preference */
+}
+
+.hello {
+  font-weight: bold; /* Make "Hello" bold */
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>inf_user_greeting_widget</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>User Greeting Infonir</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+data.username = gs.getUserDisplayName();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-08 08:49:34</sys_created_on>
+        <sys_id>383249e047d44210ef1113ff016d4373</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>User Greeting Infonir</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_383249e047d44210ef1113ff016d4373</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-14 13:06:23</sys_updated_on>
+        <template><![CDATA[<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Eudoxus+Sans&display=swap" rel="stylesheet">
+<div id="greeting-widget">
+  <p>
+    <span class="hello">Hello, <span class="username">{{c.data.username}}</span></span><br>
+    Welcome to Infonir Dashboard!
+  </p>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Release Page Infonir - Container 1">1cb023964790c210ef1113ff016d43ba</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-14 06:51:24</sys_created_on>
+        <sys_id>10b023964790c210ef1113ff016d43bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_row_10b023964790c210ef1113ff016d43bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-14 06:51:24</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_row_10b023964790c210ef1113ff016d43bd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="Release Page Infonir - Container 1">1cb023964790c210ef1113ff016d43ba</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-02-14 06:51:24</sys_created_on><sys_id>10b023964790c210ef1113ff016d43bd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_row_10b023964790c210ef1113ff016d43bd</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-02-14 06:51:24</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>821889176</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>a65bc28e475c4210ef1113ff016d432a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-14 06:51:24</sys_created_on>
+        <sys_id>10b023964790c210ef1113ff016d43bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da6626bed0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-14 06:51:24</sys_updated_on>
+        <type>Row</type>
+        <update_guid>54b023960a90c210391f68d628ea9dbe</update_guid>
+        <update_guid_history>54b023960a90c210391f68d628ea9dbe:821889176</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">004c6b5247d0c210ef1113ff016d43cb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-14 07:41:54</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>08c4cbaa4b9744c2840fdc349a97f8b9</sys_id>
+        <sys_metadata>10b023964790c210ef1113ff016d43bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_row_10b023964790c210ef1113ff016d43bd</sys_update_name>
+        <sys_update_version display_value="sp_row_10b023964790c210ef1113ff016d43bd">10b023964790c210ef1113ff016d43bf</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-14 07:41:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

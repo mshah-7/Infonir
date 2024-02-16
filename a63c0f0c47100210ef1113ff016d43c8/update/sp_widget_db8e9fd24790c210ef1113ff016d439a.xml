@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  background-color: #000000;
+  height: 50px;
+  display: flex; /* Use Flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items along the main axis (horizontally) */
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.widget-container {
+  /* Add any styles needed for the widget container */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>product_name_widget_infonir</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Product Name Widget Infonir</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.productName = $sp.getParameter("product");
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-14 06:42:03</sys_created_on>
+        <sys_id>db8e9fd24790c210ef1113ff016d439a</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Product Name Widget Infonir</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_db8e9fd24790c210ef1113ff016d439a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-14 07:01:58</sys_updated_on>
+        <template><![CDATA[<div class="card">
+  <div class="card-header">
+    {{data.productName}}
+  </div>
+  <widget class="wid" id="release_selection_infonir"> </widget>
+  <widget class="wid" id="infonir_display_team"> </widget>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

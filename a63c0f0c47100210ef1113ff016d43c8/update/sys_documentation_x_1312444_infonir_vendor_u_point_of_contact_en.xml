@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_point_of_contact" label="Point Of Contact" language="en" table="x_1312444_infonir_vendor">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_point_of_contact</element>
+            <help/>
+            <hint/>
+            <label>Point Of Contact</label>
+            <language>en</language>
+            <name>x_1312444_infonir_vendor</name>
+            <plural>Point Of Contacts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-07 09:48:58</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Point Of Contact</sys_name>
+            <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+            <sys_update_name>sys_documentation_x_1312444_infonir_vendor_u_point_of_contact_en</sys_update_name>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-07 09:48:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

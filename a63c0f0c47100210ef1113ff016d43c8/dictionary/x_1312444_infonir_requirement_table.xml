@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c19f4fcc47100210ef1113ff016d43dc" label="Requirement Table" max_length="40" name="x_1312444_infonir_requirement_table" type="collection">
+        <element label="Description" max_length="1000" name="u_description" type="translated_text"/>
+        <element attributes="encode_utf8=false" label="Product Name" max_length="32" name="u_product_name" reference="x_1312444_infonir_product_table" type="reference"/>
+        <element attributes="encode_utf8=false" dependent="u_product_name" dependent_on_field="u_product_name" label="Release" max_length="32" name="u_release" reference="x_1312444_infonir_release_table" type="reference" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Requirement" mandatory="true" max_length="40" name="u_requirement" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" mandatory="true" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="On Going" sequence="0" value="on going"/>
+                <element inactive="true" inactive_on_update="true" label="On-Hault" sequence="0" value="on-hault"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Completed" sequence="1" value="completed"/>
+                <element inactive="true" inactive_on_update="true" label="In Progress" sequence="1" value="in progress"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Team" max_length="40" name="u_team" type="string">
+            <choice>
+                <element inactive_on_update="false" label="PS" sequence="0" value="ps"/>
+                <element inactive_on_update="false" label="PE" sequence="1" value="pe"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_product_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_release"/>
+        </index>
+    </element>
+</database>

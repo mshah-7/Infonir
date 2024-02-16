@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($rootScope,$scope,spUtil,spModal) {
+  /* widget controller */
+  var c = this;
+	c.showRequirement = function() {
+
+		if(c.data.role == "user") {
+			return false;
+		}
+		return true;
+	}
+	
+$rootScope.$on('key', function(event, data) {
+
+    c.data.release = data;
+		c.server.update();
+  });
+c.onUpdate=function(id,action){
+		spUtil.addInfoMessage("Record Updated");
+		if(action=="update"){
+			spModal.open({
+				title:'Update Details',
+				widget:"widget-form",
+				widgetInput:{sys_id:id,table:'x_1312444_infonir_requirement_table'},
+			}).then(function(){
+				//spUtil.addInfoMessage("Record Updated"),
+				alert("pop close");
+					location.reload();
+					//spUtil.addInfoMessage("Record Updated");
+			})
+		}
+	}
+c.onDelete=function(sys_id){
+		spModal.confirm('Do you really want to delete?').then(function(answer){
+			c.data.sys_id=sys_id;
+			
+		c.server.update();
+			
+		location.reload();
+			spUtil.addInfoMessage("record Deleted");
+
+		})
+		//c.data.sys_id=sys_id;
+		//c.server.update();
+		//location.reload();
+	}
+		
+
+
+	
+	
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Body */
+/*body {
+  font-family: Arial, sans-serif;
+  background-color: #fbb33f;
+  color: #333; /* Text color */
+  //margin: 0; /* Remove default margin */
+//}
+
+/* Container */
+/*div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+ // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Embedded border */
+  //margin: 20px auto;
+   // overflow: hidden;
+  // width:auto;/* Center the container */
+/* Limit container width */
+//}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fbb33f;
+  color: #333; /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Container */
+div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Embedded border */
+  margin: 20px auto; /* Center the container */
+  width: max-content; /* Set the width to fit the content */
+}
+
+
+
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #00AF91;
+}
+
+/* Table */
+table {
+  width: auto; /* Make table fill the container */
+  border-collapse: collapse;
+  border-radius: 10px; /* Rounded corners for table */
+  overflow: hidden; /* Hide overflowing content for rounded corners */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Embedded border for table */
+  border: 2px solid #ddd; /* Light grey border for the table */
+}
+
+/* Table Header */
+th {
+  background-color: #00AF91;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table Body */
+td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Light grey border between cells */
+  background-color: #f2f2f2; /* Light grey background color for cells */
+}
+
+/* Increase width of description column */
+td:nth-child(3) {
+  width: 40%; /* Adjust the width as needed */
+}
+
+/* Button */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #00AF91;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #008373;
+}
+
+/* Status colors */
+.status {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Completed status */
+.status.completed {
+  color: #00AF91;
+}
+
+/* Other status */
+.status:not(.completed) {
+  color: #FF0000;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>clone_demo_display</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>clone_demo_display</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+		var role = gs.getUser().roles;
+	data.role = role;
+
+		var productName=$sp.getParameter('product');
+		productName = productName.toLowerCase();
+		productName = productName.replace(/\s/g, '');
+	//console.log(productName);
+	  var team=$sp.getParameter('team');
+	//	console.log(team);
+		//team=team.toLowerCase();
+		
+	
+		var productGr = new GlideRecord('x_1312444_infonir_product_table');
+  	productGr.addQuery('product_name', productName);
+  	productGr.query();
+		
+		var productsys_id=-1;
+		if(productGr.next()){
+			productsys_id=productGr.getValue('sys_id');
+		}
+		if(input){
+			
+		var rname=input.release;
+		console.log(rname);
+		var releaseGr=new GlideRecord('x_1312444_infonir_release_table');
+		releaseGr.addQuery('u_release_name',input.release);
+			releaseGr.addQuery('u_product',productsys_id);
+		releaseGr.query();
+	
+		var releasesys_id=-1;
+		if(releaseGr.next()){
+			releasesys_id=releaseGr.getValue('sys_id');
+		}
+	
+		
+		
+		
+		console.log(releasesys_id);
+		
+		data.table=[];
+		var gr=new GlideRecord('x_1312444_infonir_requirement_table');
+		gr.addQuery('u_product_name',productsys_id);
+	  gr.addQuery('u_team',team);
+		gr.addQuery('u_release',releasesys_id);
+	  gr.query();
+		var count=0;
+		var allCompleted=true;
+		while(gr.next()){
+			
+			//console.log(gr.getValue('u_product_name'));
+			count++;
+			var obj={};
+			obj.id=count;
+			obj.requirement=gr.getValue('u_requirement');
+			obj.description=gr.getValue('u_description');
+			obj.status=gr.getValue('u_status');
+			obj.sys_id=gr.getValue('sys_id');
+			console.log(obj);
+			data.table.push(obj);
+			 if (gr.getValue('u_status') != 'completed') {
+      allCompleted = false;
+    }
+		}
+			data.allCompleted = allCompleted;
+	
+		}
+		if(input && input.sys_id){
+		var row=new GlideRecord('x_1312444_infonir_requirement_table');
+		row.addQuery('sys_id',input.sys_id);
+		row.query();
+		
+		if(row.next()){
+			row.deleteRecord();
+		}
+																		 
+	}
+	
+})();
+
+
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-14 12:45:00</sys_created_on>
+        <sys_id>7391b06a47d4c210ef1113ff016d43c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>clone_demo_display</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_7391b06a47d4c210ef1113ff016d43c8</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-14 12:45:00</sys_updated_on>
+        <template><![CDATA[
+<h2 ng-if="c.data.allCompleted">What's New</h2>
+<h2 ng-if="!c.data.allCompleted">Current Requirements</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirement</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th ng-show="c.showRequirement()">Update</th>
+      <th ng-show="c.showRequirement()">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="row in c.data.table">
+      <td>{{row.id}}</td>
+      <td>{{row.requirement}}</td>
+      <td>{{row.description}}</td>
+      <td class="status {{row.status}}">{{row.status}}</td>      
+      <td ng-show="c.showRequirement()"><button id="update" ng-click="c.onUpdate(row.sys_id,'update')">Update</button></td>
+      <td ng-show="c.showRequirement()"><button id="delete" ng-click="c.onDelete(row.sys_id)">Delete</button></td>
+        
+    </tr>
+  </tbody>
+</table>
+
+]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_widget_7391b06a47d4c210ef1113ff016d43c8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function($rootScope,$scope,spUtil,spModal) {
+  /* widget controller */
+  var c = this;
+	c.showRequirement = function() {
+
+		if(c.data.role == "user") {
+			return false;
+		}
+		return true;
+	}
+	
+$rootScope.$on('key', function(event, data) {
+
+    c.data.release = data;
+		c.server.update();
+  });
+c.onUpdate=function(id,action){
+		spUtil.addInfoMessage("Record Updated");
+		if(action=="update"){
+			spModal.open({
+				title:'Update Details',
+				widget:"widget-form",
+				widgetInput:{sys_id:id,table:'x_1312444_infonir_requirement_table'},
+			}).then(function(){
+				//spUtil.addInfoMessage("Record Updated"),
+				alert("pop close");
+					location.reload();
+					//spUtil.addInfoMessage("Record Updated");
+			})
+		}
+	}
+c.onDelete=function(sys_id){
+		spModal.confirm('Do you really want to delete?').then(function(answer){
+			c.data.sys_id=sys_id;
+			
+		c.server.update();
+			
+		location.reload();
+			spUtil.addInfoMessage("record Deleted");
+
+		})
+		//c.data.sys_id=sys_id;
+		//c.server.update();
+		//location.reload();
+	}
+		
+
+
+	
+	
+};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;/* Body */
+/*body {
+  font-family: Arial, sans-serif;
+  background-color: #fbb33f;
+  color: #333; /* Text color */
+  //margin: 0; /* Remove default margin */
+//}
+
+/* Container */
+/*div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+ // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Embedded border */
+  //margin: 20px auto;
+   // overflow: hidden;
+  // width:auto;/* Center the container */
+/* Limit container width */
+//}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fbb33f;
+  color: #333; /* Text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Container */
+div {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Embedded border */
+  margin: 20px auto; /* Center the container */
+  width: max-content; /* Set the width to fit the content */
+}
+
+
+
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #00AF91;
+}
+
+/* Table */
+table {
+  width: auto; /* Make table fill the container */
+  border-collapse: collapse;
+  border-radius: 10px; /* Rounded corners for table */
+  overflow: hidden; /* Hide overflowing content for rounded corners */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Embedded border for table */
+  border: 2px solid #ddd; /* Light grey border for the table */
+}
+
+/* Table Header */
+th {
+  background-color: #00AF91;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table Body */
+td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Light grey border between cells */
+  background-color: #f2f2f2; /* Light grey background color for cells */
+}
+
+/* Increase width of description column */
+td:nth-child(3) {
+  width: 40%; /* Adjust the width as needed */
+}
+
+/* Button */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #00AF91;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #008373;
+}
+
+/* Status colors */
+.status {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Completed status */
+.status.completed {
+  color: #00AF91;
+}
+
+/* Other status */
+.status:not(.completed) {
+  color: #FF0000;
+}
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;clone_demo_display&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;clone_demo_display&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+		var role = gs.getUser().roles;
+	data.role = role;
+
+		var productName=$sp.getParameter('product');
+		productName = productName.toLowerCase();
+		productName = productName.replace(/\s/g, '');
+	//console.log(productName);
+	  var team=$sp.getParameter('team');
+	//	console.log(team);
+		//team=team.toLowerCase();
+		
+	
+		var productGr = new GlideRecord('x_1312444_infonir_product_table');
+  	productGr.addQuery('product_name', productName);
+  	productGr.query();
+		
+		var productsys_id=-1;
+		if(productGr.next()){
+			productsys_id=productGr.getValue('sys_id');
+		}
+		if(input){
+			
+		var rname=input.release;
+		console.log(rname);
+		var releaseGr=new GlideRecord('x_1312444_infonir_release_table');
+		releaseGr.addQuery('u_release_name',input.release);
+			releaseGr.addQuery('u_product',productsys_id);
+		releaseGr.query();
+	
+		var releasesys_id=-1;
+		if(releaseGr.next()){
+			releasesys_id=releaseGr.getValue('sys_id');
+		}
+	
+		
+		
+		
+		console.log(releasesys_id);
+		
+		data.table=[];
+		var gr=new GlideRecord('x_1312444_infonir_requirement_table');
+		gr.addQuery('u_product_name',productsys_id);
+	  gr.addQuery('u_team',team);
+		gr.addQuery('u_release',releasesys_id);
+	  gr.query();
+		var count=0;
+		var allCompleted=true;
+		while(gr.next()){
+			
+			//console.log(gr.getValue('u_product_name'));
+			count++;
+			var obj={};
+			obj.id=count;
+			obj.requirement=gr.getValue('u_requirement');
+			obj.description=gr.getValue('u_description');
+			obj.status=gr.getValue('u_status');
+			obj.sys_id=gr.getValue('sys_id');
+			console.log(obj);
+			data.table.push(obj);
+			 if (gr.getValue('u_status') != 'completed') {
+      allCompleted = false;
+    }
+		}
+			data.allCompleted = allCompleted;
+	
+		}
+		if(input &amp;&amp; input.sys_id){
+		var row=new GlideRecord('x_1312444_infonir_requirement_table');
+		row.addQuery('sys_id',input.sys_id);
+		row.query();
+		
+		if(row.next()){
+			row.deleteRecord();
+		}
+																		 
+	}
+	
+})();
+
+
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mansi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-14 12:45:00&lt;/sys_created_on&gt;&lt;sys_id&gt;7391b06a47d4c210ef1113ff016d43c8&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;clone_demo_display&lt;/sys_name&gt;&lt;sys_package display_value="Infonir" source="x_1312444_infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_7391b06a47d4c210ef1113ff016d43c8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mansi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-14 12:45:00&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[
+&lt;h2 ng-if="c.data.allCompleted"&gt;What's New&lt;/h2&gt;
+&lt;h2 ng-if="!c.data.allCompleted"&gt;Current Requirements&lt;/h2&gt;
+&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;Requirement&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Status&lt;/th&gt;
+      &lt;th ng-show="c.showRequirement()"&gt;Update&lt;/th&gt;
+      &lt;th ng-show="c.showRequirement()"&gt;Delete&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr ng-repeat="row in c.data.table"&gt;
+      &lt;td&gt;{{row.id}}&lt;/td&gt;
+      &lt;td&gt;{{row.requirement}}&lt;/td&gt;
+      &lt;td&gt;{{row.description}}&lt;/td&gt;
+      &lt;td class="status {{row.status}}"&gt;{{row.status}}&lt;/td&gt;      
+      &lt;td ng-show="c.showRequirement()"&gt;&lt;button id="update" ng-click="c.onUpdate(row.sys_id,'update')"&gt;Update&lt;/button&gt;&lt;/td&gt;
+      &lt;td ng-show="c.showRequirement()"&gt;&lt;button id="delete" ng-click="c.onDelete(row.sys_id)"&gt;Delete&lt;/button&gt;&lt;/td&gt;
+        
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-326754002</payload_hash>
+        <record_name>clone_demo_display</record_name>
+        <reverted_from/>
+        <source>5768e4624794c210ef1113ff016d43fa</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-14 12:45:00</sys_created_on>
+        <sys_id>b391b06a47d4c210ef1113ff016d43ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da7a6263d0000001</sys_recorded_at>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-14 12:45:00</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>f791b06a99d4c21031830c498882bac9</update_guid>
+        <update_guid_history>f791b06a99d4c21031830c498882bac9:-326754002</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="clone_demo_display">f115683247900210ef1113ff016d43f0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>yash</sys_created_by>
+        <sys_created_on>2024-02-15 06:28:43</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>296d4e5cba21421d874a3474dbba46b9</sys_id>
+        <sys_metadata>7391b06a47d4c210ef1113ff016d43c8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>clone_demo_display</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_widget_7391b06a47d4c210ef1113ff016d43c8</sys_update_name>
+        <sys_update_version display_value="sp_widget_7391b06a47d4c210ef1113ff016d43c8">b391b06a47d4c210ef1113ff016d43ca</sys_update_version>
+        <sys_updated_by>yash</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:28:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

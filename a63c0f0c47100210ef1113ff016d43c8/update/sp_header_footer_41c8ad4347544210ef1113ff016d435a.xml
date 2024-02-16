@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+
+
+
+
+
+
+footer {
+    background-color: #00AF91;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    font-family: 'Poppins', sans-serif;
+  	margin-top: 5px;
+  	margin-bottom: -5px;
+}
+
+.footer-content {
+    //display: flex;
+    //justify-content: center; /* Center content horizontally */
+    align-items: center;
+  	margin: 10px;
+}
+
+
+
+.footer-content img {
+    width: 100px; /* Make the image a little bigger */
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.3s; /* Add transition for smooth opacity change */
+    margin-top: -2px; /* Move the image 5 pixels higher */
+}
+
+.footer-content img:hover {
+    opacity: 0.8;
+}
+
+.footer-content a {
+    position: relative; /* Position relative for absolute positioning of color block */
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-content a:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.5); /* Yellow color block with transparency */
+    animation: colorBlockAnimation 0.5s ease forwards; /* Apply animation */
+}
+
+@keyframes colorBlockAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#pnew {
+	font-weight: bold;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Footer Widget Infonir</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-16 06:07:30</sys_created_on>
+        <sys_id>41c8ad4347544210ef1113ff016d435a</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_name>Footer Widget Infonir</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_header_footer_41c8ad4347544210ef1113ff016d435a</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-16 11:25:04</sys_updated_on>
+        <template><![CDATA[
+
+
+
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<div>
+<!-- your widget template -->
+  <footer>
+        <div class="footer-content">
+            
+          <p  id='pnew'>
+            New to <img src="sn-logo-light-green-email.png" width="160" height="32"/>?
+          <a href="https://developer.servicenow.com/dev.do#!/learn/learning-plans/utah" target="_blank"> Learn Here.</a>
+    			</p>  
+          <p>© 2024 Infonir. All rights reserved.</p>
+    </div>
+    </footer>
+</div>]]></template>
+    </sp_header_footer>
+</record_update>

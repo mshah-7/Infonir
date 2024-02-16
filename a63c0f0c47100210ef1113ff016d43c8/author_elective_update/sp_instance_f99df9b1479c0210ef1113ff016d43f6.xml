@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">1d953db9475c0210ef1113ff016d43fa</sp_column>
+        <sp_widget display_value="Get URL Parameters">41455c9947100610ef1113ff016d4303</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>yash</sys_created_by>
+        <sys_created_on>2024-02-12 10:21:28</sys_created_on>
+        <sys_id>f99df9b1479c0210ef1113ff016d43f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_instance_f99df9b1479c0210ef1113ff016d43f6</sys_update_name>
+        <sys_updated_by>yash</sys_updated_by>
+        <sys_updated_on>2024-02-12 10:21:28</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=f99df9b1479c0210ef1113ff016d43f6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_instance_f99df9b1479c0210ef1113ff016d43f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">1d953db9475c0210ef1113ff016d43fa</sp_column><sp_widget display_value="Get URL Parameters">41455c9947100610ef1113ff016d4303</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>yash</sys_created_by><sys_created_on>2024-02-12 10:21:28</sys_created_on><sys_id>f99df9b1479c0210ef1113ff016d43f6</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_instance_f99df9b1479c0210ef1113ff016d43f6</sys_update_name><sys_updated_by>yash</sys_updated_by><sys_updated_on>2024-02-12 10:21:28</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=f99df9b1479c0210ef1113ff016d43f6"/></record_update>]]></payload>
+        <payload_hash>-1960934296</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b237613447188210ef1113ff016d43e7</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>yash</sys_created_by>
+        <sys_created_on>2024-02-12 10:21:28</sys_created_on>
+        <sys_id>719df9b1479c0210ef1113ff016d43f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d9cd605b50000001</sys_recorded_at>
+        <sys_updated_by>yash</sys_updated_by>
+        <sys_updated_on>2024-02-12 10:21:28</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>b59df9b1089c0210adef6579dfc437f8</update_guid>
+        <update_guid_history>b59df9b1089c0210adef6579dfc437f8:-1960934296</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">7cb04a75479c0210ef1113ff016d436c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-12 10:35:03</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>0411f162e20843c28063c94db8bbd509</sys_id>
+        <sys_metadata>f99df9b1479c0210ef1113ff016d43f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_instance_f99df9b1479c0210ef1113ff016d43f6</sys_update_name>
+        <sys_update_version display_value="sp_instance_f99df9b1479c0210ef1113ff016d43f6">719df9b1479c0210ef1113ff016d43f9</sys_update_version>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-12 10:35:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>3</order>
+        <size>2</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">0c2464fe47500210ef1113ff016d433b</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-15 06:24:31</sys_created_on>
+        <sys_id>0c2464fe47500210ef1113ff016d43be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_column_0c2464fe47500210ef1113ff016d43be</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:24:31</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_column_0c2464fe47500210ef1113ff016d43be</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>3</order><size>2</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">0c2464fe47500210ef1113ff016d433b</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>mansi</sys_created_by><sys_created_on>2024-02-15 06:24:31</sys_created_on><sys_id>0c2464fe47500210ef1113ff016d43be</sys_id><sys_mod_count>0</sys_mod_count><sys_name>3</sys_name><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_column_0c2464fe47500210ef1113ff016d43be</sys_update_name><sys_updated_by>mansi</sys_updated_by><sys_updated_on>2024-02-15 06:24:31</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-1701427753</payload_hash>
+        <record_name>3</record_name>
+        <reverted_from/>
+        <source>1431ecfa47500210ef1113ff016d43c3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-15 06:24:31</sys_created_on>
+        <sys_id>082464fe47500210ef1113ff016d43c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18dab70299e0000001</sys_recorded_at>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:24:31</sys_updated_on>
+        <type>Column</type>
+        <update_guid>4c2464fe395002105e9d72f50ba6c7bf</update_guid>
+        <update_guid_history>4c2464fe395002105e9d72f50ba6c7bf:-1701427753</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="3">194764f247900210ef1113ff016d43da</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-15 06:38:15</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>50a703c60e0f464383704124a5f1cb29</sys_id>
+        <sys_metadata>0c2464fe47500210ef1113ff016d43be</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_column_0c2464fe47500210ef1113ff016d43be</sys_update_name>
+        <sys_update_version display_value="sp_column_0c2464fe47500210ef1113ff016d43be">082464fe47500210ef1113ff016d43c0</sys_update_version>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:38:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

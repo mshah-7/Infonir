@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>true</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>pr sys id</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	var url=new URL(location.href);
+	var product=url.searchParams.get("product");
+	product=product.toLowerCase();
+	product=product.replace(/\s/g,'');
+    var productName = product; // Assuming the field name is 'u_product_name'
+	//var sys=-1;
+    var ga = new GlideAjax('ProductSysIdUtil');
+    ga.addParam('sysparm_name', 'getSysIdByProductName');
+    ga.addParam('sysparm_productName', productName);
+    ga.getXMLAnswer(function(response) {
+        var sysId = response;
+		
+        if (sysId) {
+            // Sys_id is returned, do something with it
+			
+            //console.log('Sys ID of ' + productName + ': ' + sysId);
+            g_form.setValue('u_product_name', sysId); // Assuming the field name is 'u_product_sys_id'
+        } else {
+            // Sys_id is not returned or is empty, handle error or no data scenario
+            //console.log('Product name ' + productName + ' not found');
+        }
+    });
+	//g_form.setValue('u_product_name',sys);
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-16 09:00:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fb219e8b47d44210ef1113ff016d432b</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>pr sys id</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_script_client_fb219e8b47d44210ef1113ff016d432b</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-16 09:46:58</sys_updated_on>
+        <table>x_1312444_infonir_requirement_table</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

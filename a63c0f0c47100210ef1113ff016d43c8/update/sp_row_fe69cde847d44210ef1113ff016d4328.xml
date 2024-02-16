@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="INSERT_OR_UPDATE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Infonir Homepage - Container 1">ab59412c47d44210ef1113ff016d4363</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-08 09:21:06</sys_created_on>
+        <sys_id>fe69cde847d44210ef1113ff016d4328</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_row_fe69cde847d44210ef1113ff016d4328</sys_update_name>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-08 09:21:06</sys_updated_on>
+    </sp_row>
+</record_update>

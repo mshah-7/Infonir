@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_peteam" label="PE Team" language="en" table="x_1312444_infonir_user">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_peteam</element>
+            <help/>
+            <hint/>
+            <label>PE Team</label>
+            <language>en</language>
+            <name>x_1312444_infonir_user</name>
+            <plural>PE Teams</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>mit</sys_created_by>
+            <sys_created_on>2024-02-07 07:45:18</sys_created_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>PE Team</sys_name>
+            <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+            <sys_update_name>sys_documentation_x_1312444_infonir_user_u_peteam_en</sys_update_name>
+            <sys_updated_by>mit</sys_updated_by>
+            <sys_updated_on>2024-02-07 09:59:15</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

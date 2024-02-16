@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb43ab7147144210ef1113ff016d437d</sp_column>
+        <sp_widget display_value="Document List Infonir">b203dbf147d04210ef1113ff016d43f1</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-12 17:46:01</sys_created_on>
+        <sys_id>3553a77147144210ef1113ff016d43e5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_instance_3553a77147144210ef1113ff016d43e5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-15 05:38:58</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=3553a77147144210ef1113ff016d43e5"/>
+</record_update>

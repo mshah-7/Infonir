@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c957d34847500210ef1113ff016d43ad" label="Vendor Table" max_length="40" name="x_1312444_infonir_vendor" type="collection">
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Point Of Contact" mandatory="true" max_length="255" name="u_point_of_contact" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Team Lead" mandatory="true" max_length="255" name="u_team_lead" type="string_full_utf8"/>
+        <element attributes="edge_encryption_enabled=true" label="Vname" mandatory="true" max_length="255" name="u_vname" reference="core_company" type="reference"/>
+    </element>
+</database>

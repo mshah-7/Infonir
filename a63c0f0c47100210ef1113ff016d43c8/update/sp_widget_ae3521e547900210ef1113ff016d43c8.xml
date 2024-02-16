@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function(spModal,spUtil) {
+  /* widget controller */
+  var c = this;
+	var sys_id=sys_id;
+	var id=-1;
+	 c.onaddrequirement = function(action) {
+		 if(action=="insert"){
+    spModal.open({
+      title: 'Insert Record',
+      widget: 'widget-form',
+      widgetInput: { sys_id:id,table: 'x_1312444_infonir_requirement_table' }
+    }).then(function() {
+			var team_name=$sp.getParameter('team');
+			if (team_name){
+				g_form.setValue("u_team",team_name);
+			}
+      // Reload the page or perform any other action after insertion
+      location.reload();
+    });
+  }
+	 };
+	
+	c.showRequirement = function() {
+		console.log("Maaiz"+c.data.role);
+		if(c.data.role == "user") {
+			return false;
+		}
+		return true;
+	}
+	$rootScope.$on('key', function(event, data) {
+ 
+    c.data.release = data;
+		c.server.update();
+  });
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Button Styles */
+#dynamicTableWidget .add-requirement {
+    position: relative;
+    display: inline-block;
+}
+
+#dynamicTableWidget button {
+    background-color: #007bff; /* Blue color for the button */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Larger padding for better clickability */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-weight: bold; /* Make the plus sign bolder */
+    font-size: 20px; /* Increase font size for the plus sign */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align content to the right */
+}
+
+#dynamicTableWidget button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Info Message Styles */
+#dynamicTableWidget .info {
+    display: none;
+    position: absolute;
+    top: calc(-100% - 10px); /* Position above the button with some spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    padding: 5px 10px; /* Padding for the message */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    white-space: nowrap; /* Ensure message stays in one line */
+}
+
+#dynamicTableWidget .add-requirement:hover .info {
+    display: block;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>demo_requirement</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Demo Requirement</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var role = gs.getUser().roles;
+	data.role = role;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>yash</sys_created_by>
+        <sys_created_on>2024-02-11 13:56:33</sys_created_on>
+        <sys_id>ae3521e547900210ef1113ff016d43c8</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Demo Requirement</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_ae3521e547900210ef1113ff016d43c8</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:21:38</sys_updated_on>
+        <template><![CDATA[<div ng-if="c.data.release">
+  <div id="dynamicTableWidget" ng-if="c.showRequirement()">
+    <div class="add-requirement">
+      <button id="addrequirement" ng-click="c.onaddrequirement('insert')">+</button>
+      <div class="info">Add Requirement</div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

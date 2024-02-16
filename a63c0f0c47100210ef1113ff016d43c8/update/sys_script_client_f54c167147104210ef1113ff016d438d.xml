@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>true</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Autopopulate_record</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	//debugger;
+	var url = new URL(location.href);
+	var u_team = url.searchParams.get("team");
+	//alert(u_team);
+	g_form.setValue('u_team',u_team);
+	
+    
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-12 12:41:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f54c167147104210ef1113ff016d438d</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Autopopulate_record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_script_client_f54c167147104210ef1113ff016d438d</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-13 09:03:57</sys_updated_on>
+        <table>x_1312444_infonir_requirement_table</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

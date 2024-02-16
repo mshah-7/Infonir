@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6b3f17c047900210ef1113ff016d43ee" label="User Table" max_length="40" name="x_1312444_infonir_user" type="collection">
+        <element attributes="encode_utf8=false" label="PE Team" max_length="32" name="u_peteam" reference="x_1312444_infonir_release_table" type="reference"/>
+        <element attributes="encode_utf8=false" label="Product" max_length="32" name="u_product" reference="x_1312444_infonir_product_table" type="reference"/>
+        <element attributes="encode_utf8=false" label="PS Team" max_length="32" name="u_psteam" reference="x_1312444_infonir_vendor" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Role" max_length="40" name="u_role" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Team" max_length="40" name="u_team" type="string">
+            <choice>
+                <element inactive_on_update="false" label="PE" sequence="0" value="pe"/>
+                <element inactive_on_update="false" label="PS" sequence="1" value="ps"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" display="true" label="User Name" mandatory="true" max_length="255" name="u_uname" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_peteam"/>
+        </index>
+        <index name="index2">
+            <element name="u_product"/>
+        </index>
+        <index name="index3">
+            <element name="u_psteam"/>
+        </index>
+    </element>
+</database>

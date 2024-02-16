@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function(spModal, $scope) {
+    /* widget controller */
+    var c = this;
+		var releasename;
+ 
+		$rootScope.$on('key', function(event, data)
+			{
+   	 		c.data.release = data;
+	  		releasename = c.data.release;
+				c.server.update();
+			});
+	
+	
+	
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+
+.btn {
+    float:right;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #20d900;
+    color: white;
+    border-radius: 5px;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>infonir_display_team</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>DIsplay Team</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	// You can add server-side logic if needed
+	var productSysId;
+	var relName;
+	if (input)
+	{
+		var productName = $sp.getParameter('product');
+		data.product = productName;
+		productName = productName.toLowerCase();
+		productName = productName.replace(/\s/g, '');
+
+		relName = input.release;
+		data.release = relName;
+		var productGr = new GlideRecord('x_1312444_infonir_product_table');
+		productGr.addQuery('product_name', productName);
+		productGr.query();
+		if (productGr.next()) 
+		{
+			productSysId = productGr.getValue('sys_id');
+		}
+	}
+
+
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 10:56:27</sys_created_on>
+        <sys_id>cc3f434647908210ef1113ff016d43d9</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>DIsplay Team</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_cc3f434647908210ef1113ff016d43d9</sys_update_name>
+        <sys_updated_by>yash</sys_updated_by>
+        <sys_updated_on>2024-02-14 13:01:39</sys_updated_on>
+        <template><![CDATA[
+  
+
+
+ <h1>{{data.product}} > {{data.release}}</h1>
+     ]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $rootScope) {
+  var c = this;
+  
+  function scrollGallery(direction) {
+    var container = document.querySelector('.gallery-container');
+    container.scrollBy({
+      left: direction * 200, // Adjust based on the width of each tile
+      behavior: 'smooth'
+    });
+  }
+
+  $rootScope.$on('key', function(event, data) {
+    c.data.release = data;
+    if (c.data.release) {
+      c.server.update().then(function(response) {
+        // Check if response and response.data are defined before accessing documents
+        if (c.data.documents) {
+          c.documents = c.data.documents;
+        } else {
+          // Handle empty response or missing data
+          console.error("Server response does not contain documents data");
+          c.documents = []; // Set documents to an empty array or handle the error as needed
+        }
+      });
+    }
+  });
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Style for each document list item */
+.document-list-item {
+  position: relative; /* Add positioning context */
+  display: inline-block;
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Set the height equal to width for square tiles */
+  margin-right: 10px; /* Add space between each tile */
+  border-radius: 10px; /* Add rounded corners */
+  background-color: #00AF91; /* Set background color */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  overflow: hidden; /* Hide overflow content */
+}
+
+/* Style for document links */
+.document-list-item a {
+  position: relative; /* Add positioning context */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Style for the background image */
+.bg {
+  position: absolute; /* Position the background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  z-index: -1; /* Push the background image behind */
+  opacity: 0.5;
+}
+
+img {
+  //height: 100px;
+  width: 900px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  display: none; /* initially hidden */
+}
+
+.image-container:hover .overlay-text {
+  display: block; /* show on hover */
+}
+
+
+
+/* Style for the document name */
+.document-list-item p {
+  font-size: 15px;
+  position: absolute; /* Position the document name */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-weight: bold;
+  z-index: 1; /* Ensure the document name is above the background image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the text */
+  color: #fff; /* Set text color to white */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  transition: color 0.3s; /* Add transition effect for color change */
+}
+
+/* Change text color on hover */
+.document-list-item:hover p {
+  color: #FFBB33; /* Change text color to #FFBB33 on hover */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>document_list_infonir</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Document List Infonir</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  if (input && input.release) {
+    var releaseName = input.release;
+    var documentTableSysId;
+    var releaseSysId;
+    var productSysId;
+    var productName = $sp.getParameter('product');
+    productName = productName.toLowerCase();
+    productName = productName.replace(/\s/g, '');
+
+    // Query the product table for the product name
+    var productGr = new GlideRecord('x_1312444_infonir_product_table');
+    productGr.addQuery('product_name', productName);
+    productGr.query();
+    if (productGr.next()) {
+      productSysId = productGr.getValue('sys_id');
+    }
+
+    // Query the 'x_1312444_infonir_release_table' to get the sys_id of the selected release
+    var releaseGr = new GlideRecord('x_1312444_infonir_release_table');
+    releaseGr.addQuery('u_release_name', releaseName);
+    releaseGr.addQuery('u_product', productSysId);
+    releaseGr.query();
+    if (releaseGr.next()) {
+      releaseSysId = releaseGr.getValue('sys_id');
+    }
+
+    // Query the document table to get document record sys_id
+    var documentsSysId = [];
+    var documentGr = new GlideRecord('x_1312444_infonir_document_table');
+    documentGr.addQuery('u_release_name', releaseSysId);
+    documentGr.query();
+    while (documentGr.next()) {
+      documentTableSysId = documentGr.getValue("sys_id");
+      documentsSysId.push(documentTableSysId);
+    }
+
+    // Query sys_attachment table to get the documents
+    var SysAttachmentTableGr = new GlideRecord("sys_attachment");
+    SysAttachmentTableGr.addQuery("table_sys_id", "IN", documentsSysId); // Use "IN" operator to match values in an array
+    SysAttachmentTableGr.query();
+
+    var documents = [];
+    while (SysAttachmentTableGr.next()) {
+      var documentName = SysAttachmentTableGr.getValue("file_name");
+      var documentSysId = SysAttachmentTableGr.getValue("sys_id");
+      documents.push({
+        documentName: documentName,
+        sys_id: documentSysId
+      });
+    }
+
+    data.documents = documents;
+  }
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-12 16:34:49</sys_created_on>
+        <sys_id>b203dbf147d04210ef1113ff016d43f1</sys_id>
+        <sys_mod_count>145</sys_mod_count>
+        <sys_name>Document List Infonir</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_widget_b203dbf147d04210ef1113ff016d43f1</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-15 11:16:30</sys_updated_on>
+        <template><![CDATA[<head>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="
+https://kit.fontawesome.com/72b2b3db94.js"
+crossorigin="anonymous"></script>
+</head>
+<div ng-if="c.data.release" class="document-gallery">
+  <button class="scroll-button prev" ng-show="showPrevButton" ng-click="scrollGallery(-1)">❮</button>
+  <div class="gallery-container">
+    <ul class="document-list">
+      <li ng-repeat="document in c.documents" class="document-list-item">
+        <a href="https://dev203003.service-now.com/nav_to.do?uri=sys_attachment.do?sys_id={{document.sys_id}}" target="_blank">
+          <i class="fa-regular fa-file-lines"></i>
+          <img src="x_1312444_infonir.Doc Background.png" class="bg">
+          <p>
+            
+         {{document.documentName}} </p>
+            
+        </a>
+      </li>
+      <h2 ng-if="!c.documents || c.documents.length === 0">No documents found</h2> <!-- Add error handling in HTML -->
+    </ul>
+  </div>
+  <button class="scroll-button next" ng-show="showNextButton" ng-click="scrollGallery(1)">❯</button>
+</div>
+<div ng-if="!c.data.release">
+  <div class="image-container">
+    <img src="x_1312444_infonir.Arrow.png" />
+  </div>
+</div>
+
+]]></template>
+    </sp_widget>
+</record_update>

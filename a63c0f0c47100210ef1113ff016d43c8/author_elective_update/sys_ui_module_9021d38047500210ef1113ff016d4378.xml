@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Document Table">9c21d38047500210ef1113ff016d4375</application>
+        <filter/>
+        <name>Document Tables</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1312444_infonir.document_table_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-07 05:57:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9021d38047500210ef1113ff016d4378</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Tables</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_ui_module_9021d38047500210ef1113ff016d4378</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-07 05:57:05</sys_updated_on>
+        <table>x_1312444_infonir_document_table</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sys_ui_module_9021d38047500210ef1113ff016d4378</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Document Table">9c21d38047500210ef1113ff016d4375</application><filter/><name>Document Tables</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1312444_infonir.document_table_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>kunj</sys_created_by><sys_created_on>2024-02-07 05:57:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>9021d38047500210ef1113ff016d4378</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Document Tables</sys_name><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sys_ui_module_9021d38047500210ef1113ff016d4378</sys_update_name><sys_updated_by>kunj</sys_updated_by><sys_updated_on>2024-02-07 05:57:05</sys_updated_on><table>x_1312444_infonir_document_table</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>-1736809187</payload_hash>
+        <record_name>Document Tables</record_name>
+        <reverted_from/>
+        <source>663c0f0c47100210ef1113ff016d43ca</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-07 05:57:05</sys_created_on>
+        <sys_id>1021d38047500210ef1113ff016d437a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d82242c610000001</sys_recorded_at>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-07 05:57:05</sys_updated_on>
+        <type>Module</type>
+        <update_guid>5421d380b0500210aa06aa71190ea379</update_guid>
+        <update_guid_history>5421d380b0500210aa06aa71190ea379:-1736809187</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-07 06:26:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>63d7cd94321f425999304d04889b9f59</sys_id>
+        <sys_metadata>9021d38047500210ef1113ff016d4378</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Tables</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sys_ui_module_9021d38047500210ef1113ff016d4378</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_9021d38047500210ef1113ff016d4378">1021d38047500210ef1113ff016d437a</sys_update_version>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-07 06:26:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

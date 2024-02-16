@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>u_members</field_list>
+        <filter table="x_1312444_infonir_release_table">u_product=d6764cd847140210ef1113ff016d43a9^u_release_name=release 1.0<item display_table="x_1312444_infonir_product_table" display_value="OnboardingFlow" endquery="false" field="u_product" goto="false" newquery="false" operator="=" or="false" value="d6764cd847140210ef1113ff016d43a9"/>
+            <item endquery="false" field="u_release_name" goto="false" newquery="false" operator="=" or="false" value="release 1.0"/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>2</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">a2f7293d471c0210ef1113ff016d43c2</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-12 09:10:54</sys_created_on>
+        <sys_id>147de5b1475c0210ef1113ff016d43b4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_instance_table_147de5b1475c0210ef1113ff016d43b4</sys_update_name>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-12 09:13:01</sys_updated_on>
+        <table>x_1312444_infonir_release_table</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=147de5b1475c0210ef1113ff016d43b4"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_instance_table_147de5b1475c0210ef1113ff016d43b4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table"><sp_instance_table action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list>u_members</field_list><filter table="x_1312444_infonir_release_table">u_product=d6764cd847140210ef1113ff016d43a9^u_release_name=release 1.0<item display_table="x_1312444_infonir_product_table" display_value="OnboardingFlow" endquery="false" field="u_product" goto="false" newquery="false" operator="=" or="false" value="d6764cd847140210ef1113ff016d43a9"/><item endquery="false" field="u_release_name" goto="false" newquery="false" operator="=" or="false" value="release 1.0"/></filter><glyph/><id/><maximum_entries>5</maximum_entries><order>2</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">a2f7293d471c0210ef1113ff016d43c2</sp_column><sp_page/><sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget><sys_class_name>sp_instance_table</sys_class_name><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-12 09:10:54</sys_created_on><sys_id>147de5b1475c0210ef1113ff016d43b4</sys_id><sys_mod_count>4</sys_mod_count><sys_name/><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_instance_table_147de5b1475c0210ef1113ff016d43b4</sys_update_name><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-12 09:13:01</sys_updated_on><table>x_1312444_infonir_release_table</table><title/><url/><widget_parameters/></sp_instance_table><sys_translated_text action="delete_multiple" query="documentkey=147de5b1475c0210ef1113ff016d43b4"/></record_update>]]></payload>
+        <payload_hash>222445441</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>e8b8b07947580210ef1113ff016d4304</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-12 09:13:02</sys_created_on>
+        <sys_id>17ede9b1475c0210ef1113ff016d43ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d9c975d910000001</sys_recorded_at>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-12 09:13:02</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>1fede9b1a05c0210b1826ba4b96fb5fe</update_guid>
+        <update_guid_history>1fede9b1a05c0210b1826ba4b96fb5fe:222445441,c1ade9b1d45c0210ed974ec33b20a340:-105495892,f19da9b16b5c0210a39e9a7d4353ed93:-1464247980,658d29b1905c0210f2d2df94ef1efaf8:535282994,d87de5b1a05c0210c30b2e8e6834d9b5:-1347497679</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a7614ec2475c4210ef1113ff016d4396</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 05:16:43</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>81a21c79df514e04a311826a280bdd84</sys_id>
+        <sys_metadata>147de5b1475c0210ef1113ff016d43b4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_instance_table_147de5b1475c0210ef1113ff016d43b4</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_147de5b1475c0210ef1113ff016d43b4">17ede9b1475c0210ef1113ff016d43ff</sys_update_version>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:16:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

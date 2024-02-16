@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="44a09b0047500210ef1113ff016d43a0" sys_domain="global" table="x_1312444_infonir_release_table" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_release_name</element>
+            <position>0</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>5abe502047544210ef1113ff016d4399</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_product</element>
+            <position>1</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>5ebe502047544210ef1113ff016d4399</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_status</element>
+            <position>2</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>52be502047544210ef1113ff016d439a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_release_date</element>
+            <position>3</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>56be502047544210ef1113ff016d439a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lead</element>
+            <position>4</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>5abe502047544210ef1113ff016d439a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_members</element>
+            <position>5</position>
+            <sys_created_by>kunj</sys_created_by>
+            <sys_created_on>2024-02-08 06:14:34</sys_created_on>
+            <sys_id>5ebe502047544210ef1113ff016d439a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1312444_infonir_release_table" sys_domain="global" view="Default view">44a09b0047500210ef1113ff016d43a0</sys_ui_section>
+            <sys_updated_by>kunj</sys_updated_by>
+            <sys_updated_on>2024-02-08 06:14:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_1312444_infonir_release_table</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>yash</sys_created_by>
+            <sys_created_on>2024-02-07 05:54:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>44a09b0047500210ef1113ff016d43a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1312444_infonir_release_table</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+            <sys_update_name>sys_ui_section_44a09b0047500210ef1113ff016d43a0</sys_update_name>
+            <sys_updated_by>yash</sys_updated_by>
+            <sys_updated_on>2024-02-07 05:54:52</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

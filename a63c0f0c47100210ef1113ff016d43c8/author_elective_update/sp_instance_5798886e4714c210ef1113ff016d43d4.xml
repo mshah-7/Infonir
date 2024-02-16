@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">fa8844ee4714c210ef1113ff016d4313</sp_column>
+        <sp_widget display_value="DIsplay Team">cc3f434647908210ef1113ff016d43d9</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-14 09:45:50</sys_created_on>
+        <sys_id>5798886e4714c210ef1113ff016d43d4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_instance_5798886e4714c210ef1113ff016d43d4</sys_update_name>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-14 10:04:53</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=5798886e4714c210ef1113ff016d43d4"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_instance_5798886e4714c210ef1113ff016d43d4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance"><sp_instance action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id/><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">fa8844ee4714c210ef1113ff016d4313</sp_column><sp_widget display_value="DIsplay Team">cc3f434647908210ef1113ff016d43d9</sp_widget><sys_class_name>sp_instance</sys_class_name><sys_created_by>kunj</sys_created_by><sys_created_on>2024-02-14 09:45:50</sys_created_on><sys_id>5798886e4714c210ef1113ff016d43d4</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_instance_5798886e4714c210ef1113ff016d43d4</sys_update_name><sys_updated_by>kunj</sys_updated_by><sys_updated_on>2024-02-14 10:04:53</sys_updated_on><title/><url/><widget_parameters/></sp_instance><sys_translated_text action="delete_multiple" query="documentkey=5798886e4714c210ef1113ff016d43d4"/></record_update>]]></payload>
+        <payload_hash>213698847</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>2f98739e47d0c210ef1113ff016d4388</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-14 10:04:53</sys_created_on>
+        <sys_id>eafc0c264754c210ef1113ff016d4359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da7138fbc0000001</sys_recorded_at>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-14 10:04:53</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>a2fc0c26f954c2100d62862706588f59</update_guid>
+        <update_guid_history>a2fc0c26f954c2100d62862706588f59:213698847,c9fc8c624e54c210986319f596de4acb:216851643,639884eee014c210e4e798f353538d30:-1352872156</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">4c98987247500210ef1113ff016d43ef</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-15 05:33:59</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>03591b260bbc4aa48693cff53e075a10</sys_id>
+        <sys_metadata>5798886e4714c210ef1113ff016d43d4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_instance_5798886e4714c210ef1113ff016d43d4</sys_update_name>
+        <sys_update_version display_value="sp_instance_5798886e4714c210ef1113ff016d43d4">eafc0c264754c210ef1113ff016d4359</sys_update_version>
+        <sys_updated_by>kunj</sys_updated_by>
+        <sys_updated_on>2024-02-15 05:33:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

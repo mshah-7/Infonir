@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list/>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">73eddab147104210ef1113ff016d4327</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Simple List">5b255672cb03020000f8d856634c9c28</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-12 12:42:51</sys_created_on>
+        <sys_id>0dfd527147104210ef1113ff016d432a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_instance_vlist_0dfd527147104210ef1113ff016d432a</sys_update_name>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:22:00</sys_updated_on>
+        <table/>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=0dfd527147104210ef1113ff016d432a"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_instance_vlist_0dfd527147104210ef1113ff016d432a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist"><sp_instance_vlist action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list/><filter/><glyph/><id/><maximum_entries>5</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">73eddab147104210ef1113ff016d4327</sp_column><sp_page/><sp_widget display_value="Simple List">5b255672cb03020000f8d856634c9c28</sp_widget><sys_class_name>sp_instance_vlist</sys_class_name><sys_created_by>mit</sys_created_by><sys_created_on>2024-02-12 12:42:51</sys_created_on><sys_id>0dfd527147104210ef1113ff016d432a</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_instance_vlist_0dfd527147104210ef1113ff016d432a</sys_update_name><sys_updated_by>mit</sys_updated_by><sys_updated_on>2024-02-13 05:22:00</sys_updated_on><table/><title/><url/><widget_parameters/></sp_instance_vlist><sys_translated_text action="delete_multiple" query="documentkey=0dfd527147104210ef1113ff016d432a"/></record_update>]]></payload>
+        <payload_hash>1254047729</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>e8b8b07947580210ef1113ff016d4304</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 05:22:00</sys_created_on>
+        <sys_id>b8a28a06475c4210ef1113ff016d431b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18da0ea366b0000001</sys_recorded_at>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:22:00</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>b0a28a06d45c4210d4a5bc023bbe421b</update_guid>
+        <update_guid_history>b0a28a06d45c4210d4a5bc023bbe421b:1254047729,84a20246d05c4210c790d54cee6d0749:-47866352,0dfddeb16b10421034393ccf080a9e89:1254047729</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">86a20246475c4210ef1113ff016d434f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-13 05:22:05</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>9d28dd6485be45a1b7d5014b6a61f9c9</sys_id>
+        <sys_metadata>0dfd527147104210ef1113ff016d432a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_0dfd527147104210ef1113ff016d432a</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_0dfd527147104210ef1113ff016d432a">b8a28a06475c4210ef1113ff016d431b</sys_update_version>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-13 05:22:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
