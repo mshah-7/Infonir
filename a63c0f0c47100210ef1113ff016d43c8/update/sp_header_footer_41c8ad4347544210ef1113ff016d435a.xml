@@ -100,14 +100,14 @@ footer {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-02-16 06:07:30</sys_created_on>
         <sys_id>41c8ad4347544210ef1113ff016d435a</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>Footer Widget Infonir</sys_name>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
         <sys_update_name>sp_header_footer_41c8ad4347544210ef1113ff016d435a</sys_update_name>
-        <sys_updated_by>kunj</sys_updated_by>
-        <sys_updated_on>2024-02-16 11:25:04</sys_updated_on>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-18 18:28:25</sys_updated_on>
         <template><![CDATA[
 
 
@@ -117,7 +117,7 @@ footer {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <div>
-<!-- your widget template -->
+<!-- your widget template 
   <footer>
         <div class="footer-content">
             
@@ -128,6 +128,6 @@ footer {
           <p>© 2024 Infonir. All rights reserved.</p>
     </div>
     </footer>
-</div>]]></template>
+</div>-->]]></template>
     </sp_header_footer>
 </record_update>
