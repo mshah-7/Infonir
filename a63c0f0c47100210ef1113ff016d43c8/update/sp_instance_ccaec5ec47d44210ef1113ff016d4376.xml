@@ -16,14 +16,14 @@
         <sys_created_by>kunj</sys_created_by>
         <sys_created_on>2024-02-08 09:43:51</sys_created_on>
         <sys_id>ccaec5ec47d44210ef1113ff016d4376</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
         <sys_update_name>sp_instance_ccaec5ec47d44210ef1113ff016d4376</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-11 17:34:06</sys_updated_on>
+        <sys_updated_on>2024-02-21 06:25:47</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters><![CDATA[{
@@ -32,8 +32,8 @@
 		"displayValue": "Onboarding Flow"
 	},
 	"image_name": {
-		"value": "x_1312444_infonir.OnboardingFlow.png",
-		"displayValue": "x_1312444_infonir.OnboardingFlow.png"
+		"value": "x_1312444_infonir.onboarding.png",
+		"displayValue": "x_1312444_infonir.onboarding.png"
 	}
 }]]></widget_parameters>
     </sp_instance>

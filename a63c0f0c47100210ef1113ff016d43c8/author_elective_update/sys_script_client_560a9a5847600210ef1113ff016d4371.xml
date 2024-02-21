@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>true</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>set_status</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   g_form.setValue('u_status','pending');
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-20 06:51:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>560a9a5847600210ef1113ff016d4371</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>set_status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sys_script_client_560a9a5847600210ef1113ff016d4371</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-20 06:56:48</sys_updated_on>
+        <table>x_1312444_infonir_requirement_table</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sys_script_client_560a9a5847600210ef1113ff016d4371</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;true&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field/&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;set_status&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   g_form.setValue('u_status','pending');
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mansi&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-20 06:51:25&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;560a9a5847600210ef1113ff016d4371&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;set_status&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Infonir" source="x_1312444_infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Infonir"&gt;a63c0f0c47100210ef1113ff016d43c8&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_560a9a5847600210ef1113ff016d4371&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mansi&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-20 06:56:48&lt;/sys_updated_on&gt;&lt;table&gt;x_1312444_infonir_requirement_table&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1600591319</payload_hash>
+        <record_name>set_status</record_name>
+        <reverted_from/>
+        <source>2ac6129447600210ef1113ff016d43ee</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-20 06:56:48</sys_created_on>
+        <sys_id>b57b56d847600210ef1113ff016d43f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18dc54d86780000001</sys_recorded_at>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-20 06:56:48</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>7d7b56d81b600210fc46835cf68745f0</update_guid>
+        <update_guid_history>7d7b56d81b600210fc46835cf68745f0:1600591319,890b5698e760021088303567d932b541:955177866,cf3a5a5851600210eb1ccecf88449a0f:-992635465</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-20 06:57:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>35356411fadc48ec8b40f2a25d879a04</sys_id>
+        <sys_metadata>560a9a5847600210ef1113ff016d4371</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set_status</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent display_value="Requirement Table">c19f4fcc47100210ef1113ff016d43dc</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sys_script_client_560a9a5847600210ef1113ff016d4371</sys_update_name>
+        <sys_update_version display_value="sys_script_client_560a9a5847600210ef1113ff016d4371">b57b56d847600210ef1113ff016d43f1</sys_update_version>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-20 06:57:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

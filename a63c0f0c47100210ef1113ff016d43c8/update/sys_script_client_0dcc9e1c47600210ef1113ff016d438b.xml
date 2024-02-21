@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
         <active>true</active>
-        <applies_extended>false</applies_extended>
+        <applies_extended>true</applies_extended>
         <condition/>
         <description/>
         <field/>
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>get_release_wd</name>
+        <name>set_status</name>
         <order/>
         <script><![CDATA[function onLoad() {
-	var releaseName = localStorage.getItem("releasesys_id");
-	//releaseName=releaseName.toLowerCase();
-	//alert(releaseName);
-    // Define the release name you want to search for
-    //var releaseName = 'YourReleaseName'; // Replace 'YourReleaseName' with the actual release name
-
-    // Make an AJAX call to the server-side script include
-    //alert(releaseName);
-	if (releaseName){
-		g_form.setValue('u_release',releaseName);
+   //Type appropriate comment here, and begin script below
+   var flag=localStorage.getItem("flag");
+   //alert(flag);
+	if(flag=="true"){
+		g_form.setValue('u_status','pending');
 	}
 	
-}
-]]></script>
+}]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>mansi</sys_created_by>
-        <sys_created_on>2024-02-16 11:19:28</sys_created_on>
+        <sys_created_on>2024-02-20 07:04:22</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ab803a0b47584210ef1113ff016d4381</sys_id>
-        <sys_mod_count>17</sys_mod_count>
-        <sys_name>get_release_wd</sys_name>
+        <sys_id>0dcc9e1c47600210ef1113ff016d438b</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>set_status</sys_name>
         <sys_overrides/>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
-        <sys_update_name>sys_script_client_ab803a0b47584210ef1113ff016d4381</sys_update_name>
+        <sys_update_name>sys_script_client_0dcc9e1c47600210ef1113ff016d438b</sys_update_name>
         <sys_updated_by>mansi</sys_updated_by>
-        <sys_updated_on>2024-02-21 05:08:28</sys_updated_on>
+        <sys_updated_on>2024-02-21 05:09:18</sys_updated_on>
         <table>x_1312444_infonir_requirement_table</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

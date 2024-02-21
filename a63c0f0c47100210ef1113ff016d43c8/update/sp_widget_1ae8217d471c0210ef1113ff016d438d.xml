@@ -7,30 +7,26 @@
   var sys_id = sys_id;
   var id = -1;
 
+	var flag=false;
 	
-	if (c.data.releasesys_id) {
-        localStorage.setItem('key1', c.data.releasesys_id);
-   
-	
-	}
 	
   c.onaddrequirement = function(action) {
     if (action == "insert") {
+			localStorage.setItem('releasesys_id',c.data.releasesys_id);
+			flag=true;
+			localStorage.setItem('flag',flag);
       spModal.open({
         title: 'Insert Record',
         widget: 'widget-form',
         widgetInput: { sys_id: id, table: 'x_1312444_infonir_requirement_table' }
       }).then(function() {
-
+				
         c.server.update();
         setTimeout(function() {
           spUtil.update($scope);
         }, 3000);
 
-        var team_name = $sp.getParameter('team');
-        if (team_name) {
-          g_form.setValue("u_team", team_name);
-        }
+
 
       });
     }
@@ -57,6 +53,8 @@
   c.onUpdate = function(id, action) {
     spUtil.addInfoMessage("Record Updated");
     if (action == "update") {
+				flag=false;
+			localStorage.setItem('flag',flag);
       spModal.open({
         title: 'Update Details',
         widget: "widget-form",
@@ -296,7 +294,7 @@ button:hover {
 		releaseGr.addQuery('u_product',productsys_id);
 		releaseGr.query();
 	
-		var releasesys_id=-1;
+		var releasesys_id;
 		if(releaseGr.next()){
 			releasesys_id=releaseGr.getValue('sys_id');
 			//SlocalStorage.setItem('key1',releasesys_id);
@@ -304,7 +302,7 @@ button:hover {
 			//console.log("idhar dekh"+releasesys_id);
 			//localStorage.setItem('key1',releasesys_id);
 		data.releasesys_id = releasesys_id;
-			console.log("yes"+releasesys_id);
+			console.log("yes"+data.releasesys_id);
 		
 		
 		//console.log(releasesys_id);
@@ -357,14 +355,14 @@ button:hover {
         <sys_created_by>yash</sys_created_by>
         <sys_created_on>2024-02-12 08:51:07</sys_created_on>
         <sys_id>1ae8217d471c0210ef1113ff016d438d</sys_id>
-        <sys_mod_count>192</sys_mod_count>
+        <sys_mod_count>214</sys_mod_count>
         <sys_name>Demo display</sys_name>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
         <sys_update_name>sp_widget_1ae8217d471c0210ef1113ff016d438d</sys_update_name>
-        <sys_updated_by>mansi</sys_updated_by>
-        <sys_updated_on>2024-02-16 16:32:52</sys_updated_on>
+        <sys_updated_by>yash</sys_updated_by>
+        <sys_updated_on>2024-02-21 05:03:43</sys_updated_on>
         <template><![CDATA[
  <head>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
