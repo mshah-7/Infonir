@@ -34,6 +34,8 @@
   font-weight: bold; /* Make "Hello" bold */
 }
 
+
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -58,21 +60,25 @@ data.username = gs.getUserDisplayName();
         <sys_created_by>mit</sys_created_by>
         <sys_created_on>2024-02-08 08:49:34</sys_created_on>
         <sys_id>383249e047d44210ef1113ff016d4373</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>User Greeting Infonir</sys_name>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
         <sys_update_name>sp_widget_383249e047d44210ef1113ff016d4373</sys_update_name>
-        <sys_updated_by>kunj</sys_updated_by>
-        <sys_updated_on>2024-02-14 13:06:23</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-21 17:38:10</sys_updated_on>
         <template><![CDATA[<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Eudoxus+Sans&display=swap" rel="stylesheet">
 <div id="greeting-widget">
   <p>
-    <span class="hello">Hello, <span class="username">{{c.data.username}}</span></span><br>
+    <span class="hello">Hello, 
+      <span class="username">{{c.data.username}}</span>
+     
+    </span><br>
     Welcome to Infonir Dashboard!
   </p>
 </div>
+
 ]]></template>
     </sp_widget>
 </record_update>

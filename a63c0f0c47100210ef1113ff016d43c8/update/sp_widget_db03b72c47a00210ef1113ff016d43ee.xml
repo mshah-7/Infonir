@@ -22,15 +22,16 @@
 			var option = document.createElement("option");
 			option.text = release[i];
 			selectElement.add(option);
+			console.log(release[i]);
+			if (release[i] == "Release 2.0") {
+        // Set selectedIndex to the index of "release 2.0"
+        selectElement.value = i;
+      }
 			
 		}
 
-		
-
-		selectElement.selectedIndex = 0;
 		$scope.broadcastReleaseSelection = function() {
 			var selectedRelease = selectElement.value;
-			console.log(selectedRelease);
 			
 			//localStorage.setItem('key',selectedRelease);
 			$rootScope.$broadcast('key',selectedRelease);
@@ -70,10 +71,10 @@
         <docs/>
         <field_list/>
         <has_preview>true</has_preview>
-        <id>release_selection_infonir</id>
+        <id>release_sel_kunj_clone</id>
         <internal>false</internal>
         <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
-        <name>Release Selection Infonir</name>
+        <name>release sel kunj clone</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -83,7 +84,7 @@
   data.release = [];
   
   // Get the "product" parameter from the URL
-  var productName = $sp.getParameter('product');
+  var productName = "onboardingflow";
 	productName = productName.toLowerCase();
 	productName = productName.replace(/\s/g, '');
 
@@ -108,21 +109,21 @@
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
-        <sys_created_by>kunj</sys_created_by>
-        <sys_created_on>2024-02-09 10:31:13</sys_created_on>
-        <sys_id>e3032e7c47d88210ef1113ff016d435b</sys_id>
-        <sys_mod_count>111</sys_mod_count>
-        <sys_name>Release Selection Infonir</sys_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-21 07:57:57</sys_created_on>
+        <sys_id>db03b72c47a00210ef1113ff016d43ee</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>release sel kunj clone</sys_name>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
-        <sys_update_name>sp_widget_e3032e7c47d88210ef1113ff016d435b</sys_update_name>
+        <sys_update_name>sp_widget_db03b72c47a00210ef1113ff016d43ee</sys_update_name>
         <sys_updated_by>mit</sys_updated_by>
-        <sys_updated_on>2024-02-21 07:54:34</sys_updated_on>
+        <sys_updated_on>2024-02-21 08:17:57</sys_updated_on>
         <template><![CDATA[<div>
   <!-- your widget template -->
   <select id="release" name='release' value="selectElement.selectedIndex" ng-model='c.release' ng-change="broadcastReleaseSelection()">
-    <option value="" disabled selected="Release 2.0">Select the Release</option>
+    <option value="">Select the Release</option>
     <!-- Add other options here if needed -->
   </select>
 </div>
