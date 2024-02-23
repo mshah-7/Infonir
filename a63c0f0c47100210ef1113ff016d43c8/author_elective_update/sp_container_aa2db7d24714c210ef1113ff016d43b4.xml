@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Release Page Infonir - Container 4</name>
+        <order>4</order>
+        <sp_page display_value="release_page_infonir">79c2ea7c47d88210ef1113ff016d4335</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>kunj</sys_created_by>
+        <sys_created_on>2024-02-14 08:55:48</sys_created_on>
+        <sys_id>aa2db7d24714c210ef1113ff016d43b4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Release Page Infonir - Container 4</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_container_aa2db7d24714c210ef1113ff016d43b4</sys_update_name>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:24:50</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</application>
+        <file_path/>
+        <instance_id>fb841c611b56fd9c32182f8dee4bcb5b</instance_id>
+        <instance_name>dev203003</instance_name>
+        <name>sp_container_aa2db7d24714c210ef1113ff016d43b4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Release Page Infonir - Container 4</name><order>4</order><sp_page display_value="release_page_infonir">79c2ea7c47d88210ef1113ff016d4335</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>kunj</sys_created_by><sys_created_on>2024-02-14 08:55:48</sys_created_on><sys_id>aa2db7d24714c210ef1113ff016d43b4</sys_id><sys_mod_count>5</sys_mod_count><sys_name>Release Page Infonir - Container 4</sys_name><sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package><sys_policy/><sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope><sys_update_name>sp_container_aa2db7d24714c210ef1113ff016d43b4</sys_update_name><sys_updated_by>mansi</sys_updated_by><sys_updated_on>2024-02-15 06:24:50</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1183338417</payload_hash>
+        <record_name>Release Page Infonir - Container 4</record_name>
+        <reverted_from/>
+        <source>1431ecfa47500210ef1113ff016d43c3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mansi</sys_created_by>
+        <sys_created_on>2024-02-15 06:24:50</sys_created_on>
+        <sys_id>bc3428fe47500210ef1113ff016d43a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18dab7075c40000001</sys_recorded_at>
+        <sys_updated_by>mansi</sys_updated_by>
+        <sys_updated_on>2024-02-15 06:24:50</sys_updated_on>
+        <type>Container</type>
+        <update_guid>743428fefe500210fcf4e561afc4e5a4</update_guid>
+        <update_guid_history>743428fefe500210fcf4e561afc4e5a4:-1183338417,426dffd27014c21042a3d865dca2ee92:2070973872,e05dbfd23714c210d6b868392bc5e15c:1030318865,434d7fd2b014c210fed0777ee65204c1:2070973872,494d7fd2e414c2104aed3d657b81dd34:1030318865,6e2db7d2cf14c210975799157d981db5:2070973872</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Release Page Infonir - Container 4">cbfe984547244210ef1113ff016d43af</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-22 05:48:22</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>5828bb0a87ee4447aaf1dd269c665cd1</sys_id>
+        <sys_metadata>aa2db7d24714c210ef1113ff016d43b4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Release Page Infonir - Container 4</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_scope_delete display_value="">09a65fa9b63f4fc083f5a68abded8e81</sys_scope_delete>
+        <sys_update_name>sp_container_aa2db7d24714c210ef1113ff016d43b4</sys_update_name>
+        <sys_update_version display_value="sp_container_aa2db7d24714c210ef1113ff016d43b4">bc3428fe47500210ef1113ff016d43a4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-22 05:48:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
