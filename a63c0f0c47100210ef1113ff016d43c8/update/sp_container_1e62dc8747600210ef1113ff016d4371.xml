@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="INSERT_OR_UPDATE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>widget trials mit - Container 2</name>
+        <order>2</order>
+        <sp_page display_value="widget_trials_mit">8247e9f9471c0210ef1113ff016d4357</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>mit</sys_created_by>
+        <sys_created_on>2024-02-28 10:01:17</sys_created_on>
+        <sys_id>1e62dc8747600210ef1113ff016d4371</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>widget trials mit - Container 2</sys_name>
+        <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
+        <sys_update_name>sp_container_1e62dc8747600210ef1113ff016d4371</sys_update_name>
+        <sys_updated_by>mit</sys_updated_by>
+        <sys_updated_on>2024-02-28 10:01:20</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+</record_update>
