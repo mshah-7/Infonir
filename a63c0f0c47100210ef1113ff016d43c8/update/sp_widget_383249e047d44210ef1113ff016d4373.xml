@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+	setGreet();
+	function setGreet(){
+		var hour = new Date().getHours();
+		var welcomeTypes = ["Good Morning", "Good Afternoon", "Good Evening"];
+		var welcomeText = "";
+
+		if (hour < 12) welcomeText = welcomeTypes[0];
+		else if (hour < 17) welcomeText = welcomeTypes[1];
+		else welcomeText = welcomeTypes[2];
+		c.welcomeText = welcomeText;
+	}
+	setInterval(setGreet,300000);
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>#greeting-widget {
   background-color: #00AF91;
@@ -60,18 +75,18 @@ data.username = gs.getUserDisplayName();
         <sys_created_by>mit</sys_created_by>
         <sys_created_on>2024-02-08 08:49:34</sys_created_on>
         <sys_id>383249e047d44210ef1113ff016d4373</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>User Greeting Infonir</sys_name>
         <sys_package display_value="Infonir" source="x_1312444_infonir">a63c0f0c47100210ef1113ff016d43c8</sys_package>
         <sys_policy/>
         <sys_scope display_value="Infonir">a63c0f0c47100210ef1113ff016d43c8</sys_scope>
         <sys_update_name>sp_widget_383249e047d44210ef1113ff016d4373</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-21 17:38:10</sys_updated_on>
+        <sys_updated_on>2024-02-29 05:27:08</sys_updated_on>
         <template><![CDATA[<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Eudoxus+Sans&display=swap" rel="stylesheet">
 <div id="greeting-widget">
   <p>
-    <span class="hello">Hello, 
+    <span class="hello">{{c.welcomeText}}, 
       <span class="username">{{c.data.username}}</span>
      
     </span><br>
